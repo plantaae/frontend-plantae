@@ -48,7 +48,7 @@ const questoes = [
     pergunta: "Qual material é colocado na lixeira vermelha?",
     alternativas: [
       { id: 1, text: "Metal", correct: false },
-      { id: 2, text: "Plástico", correct: false },
+      { id: 2, text: "Papel e Papelão", correct: false },
       { id: 3, text: "Vidro", correct: false },
       { id: 4, text: "Plástico", correct: true }, // D
     ],
@@ -66,7 +66,7 @@ const questoes = [
     pergunta: "Qual é a cor da lixeira para o lixo orgânico?",
     alternativas: [
       { id: 1, text: "Preta", correct: false },
-      { id: 2, text: "Marrom", correct: false },
+      { id: 2, text: "Cinza", correct: false },
       { id: 3, text: "Marrom", correct: true }, // C
       { id: 4, text: "Branca", correct: false },
     ],

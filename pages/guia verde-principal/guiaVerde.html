@@ -1,12 +1,413 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Árvore de Hábitos</title>
+    <script src="../../js-global/navbar.js" defer></script>
+    <script src="guiaVerde.js" defer></script>
     <link rel="stylesheet" href="guiaVerde.css">
-    <title>Tela Principal - Guia Verde</title>
 </head>
+
 <body>
-    <h1>Tela Principal - Guia Verde</h1>
+     <header>
+    <nav class="containerNavbar">
+      <div class="containerImgNavbar">
+        <img src="img/logo-icon 1.png" alt="logo Plantaê" />
+      </div>
+      <button id="mobileMenu" class="mobileMenu" aria-controls="menu" aria-expanded="false"
+        aria-label="Abrir menu de navegação">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+      <ul id="menu" class="menu">
+        <li class="home">
+          <a href="/">Home</a>
+        </li>
+        <li class="guiaVerde">
+          <a href="/">Guia Verde</a>
+        </li>
+        <li class="mapa">
+          <a href="/">Mapa</a>
+        </li>
+        <li class="painel">
+          <a href="/">Painel</a>
+        </li>
+        <li class="sobre">
+          <a href="/">Sobre</a>
+        </li>
+        <li class="contribuicao">
+          <a class="botaoContribuicao" href="/">
+            <span class="textoContribuicao">Contribuição</span>
+            <div class="botaoContribuicaoParteBranca">
+              <div class="iconContribuicao">
+                <img src="img/Vector.svg" alt="" aria-hidden="true" />
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <div class="container">
+
+        <!-- TÍTULO -->
+        <div class="text1">
+            <h1>Cultive seus hábitos</h1>
+            <p>Cada atitude rende folhas. Some, evolua e veja sua árvore ganhar vida.</p>
+        </div>
+
+        <!-- INFORMAÇÕES DE NÍVEL -->
+        <section class="nivel">
+            <div class="card-info" id="textoNivel">Nível 0 — 0%</div>
+            <div class="card-info" id="textoFolhas">🌱 0 folhas</div>
+        </section>
+
+        <!-- CARTÃO PRINCIPAL DA ÁRVORE -->
+        <section class="card">
+            <div class="arvoreP">
+                <img id="imgArvore" src="../../assets/img/guia-verde/arvore-nivel-0.svg" alt="Árvore em crescimento">
+            </div>
+
+            <div class="progress-label">
+                <p id="metaLabel">0 folhas</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="barra" id="barra">0%</div>
+            </div>
+
+            <p class="prox-nivel" id="textoProx">Próximo nível em 200 folhas</p>
+
+            <div class="buttons">
+                <button class="btn verde">Ver conquistas</button>
+                <button class="btn cinza" id="btnReiniciar">Reiniciar</button>
+            </div>
+        </section>
+
+        <!-- MINHAS TAREFAS -->
+        <section class="missao" id="missao">
+            <h3>Minhas tarefas</h3>
+
+            <label><input type="checkbox" class="tarefa" value="50"> 🌿 Separar o lixo (+50 folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="50"> 🌿 Fechar a torneira ao escovar (+50
+                folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="50"> 🌿 Apagar luzes desnecessárias (+50 folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="50"> 🌿 Evitar banhos longos (+50 folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="10"> 🌿 Usar lâmpadas de LED (+10 folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="10"> 🌿 Aproveitar luz natural (+10 folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="10"> 🌿 Reutilizar água (+10 folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="10"> 🌿 Usar balde no lugar da mangueira (+10
+                folhas)</label>
+            <label><input type="checkbox" class="tarefa" value="10"> 🌿 Outra (+10 folhas)</label>
+
+            <p id="resetar" class="resetar">🔄 Apagar tudo</p>
+        </section>
+
+        <!-- PAINEL INFERIOR -->
+        <section class="painel-inferior">
+
+            <!-- SEQUÊNCIA -->
+            <div class="box sequencia-box">
+                <h3>Sequência</h3>
+                <div class="sequencia-status">
+                    <span class="emoji">🔥</span>
+                    <span class="dias">3 dias seguidos</span>
+                </div>
+                <p class="info">Você ganha +5 folhas no primeiro feito do dia.</p>
+            </div>
+
+            <!-- CONQUISTAS -->
+            <div class="box conquistas-box">
+                <h3>Conquistas</h3>
+
+                <div class="conquistas-lista">
+                    <div class="conquista-item">
+                        <img src="../../assets/img/guia-verde/" alt="">
+                        <p>Primeiro dia</p>
+                    </div>
+                    <div class="conquista-item">
+                        <img src="img/conquista2.png" alt="">
+                        <p>7 dias seguidos</p>
+                    </div>
+                    <div class="conquista-item">
+                        <img src="img/conquista4.png" alt="">
+                        <p>Eco guardião</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- QUIZ -->
+        <section class="quiz-section">
+            <h2>Escolha seu Quiz</h2>
+            <p class="subtitle">Teste seus conhecimentos e ganhe folhas para fazer sua árvore crescer.</p>
+
+            <!-- QUIZ 1 -->
+            <div class="quiz-card quiz1">
+                <div class="quiz-left">
+                    <div class="icon-wrapper">
+                        <span class="folhas-badge">+50 folhas</span>
+                        <img src="../../assets/img/guia-verde/icon-reciclagem.svg" class="quiz-icon">
+                    </div>
+
+                    <div class="quiz-texts">
+                        <h3>Descarte Correto do Lixo e Reciclagem</h3>
+                        <p>Identifique materiais recicláveis e seu destino correto.</p>
+                    </div>
+                </div>
+                <a href="../guia-verde-quiz/quiz-1/quiz1.html" target="_blank" class="btn-quiz">Fazer Quiz</a>
+                <!--aqui precisa alterando para o <A> ajuste a fazeres ainda -->
+            </div>
+
+            <!-- QUIZ 2 -->
+            <div class="quiz-card quiz2">
+                <div class="quiz-left">
+                    <div class="icon-wrapper">
+                        <span class="folhas-badge">+100 folhas</span>
+                        <img src="../../assets/img/guia-verde/icon-gota.svg" class="quiz-icon">
+                    </div>
+                    <div class="quiz-texts">
+                        <h3>Economia de Água e Energia</h3>
+                        <p>Descubra como pequenas atitudes economizam recursos naturais.</p>
+                    </div>
+                </div>
+                <a href="../guia-verde-quiz/quiz-2/quiz2.html" target="_blank" class="btn-quiz">Fazer Quiz</a>
+            </div>
+
+            <!-- QUIZ 3 -->
+            <div class="quiz-card quiz3">
+                <div class="quiz-left">
+                    <div class="icon-wrapper">
+                        <span class="folhas-badge">+150 folhas</span>
+                        <img src="../../assets/img/guia-verde/icon-folha.svg" class="quiz-icon">
+                    </div>
+                    <div class="quiz-texts">
+                        <h3>Biodiversidade e Cuidado</h3>
+                        <p>Como proteger plantas e ecossistemas ao seu redor.</p>
+                    </div>
+                </div>
+                <a href="../guia-verde-quiz/quiz-3/quiz3.html" target="_blank" class="btn-quiz">Fazer Quiz</a>
+            </div>
+        </section>
+
+        <!-- VÍDEOS -->
+        <section class="videos-section">
+            <h2>Tutoriais em Vídeo</h2>
+            <p class="subtitle">Aprenda em poucos minutos e aja hoje.</p>
+
+            <div class="videos-grid">
+
+                <!-- CARD 1 -->
+
+                <a href="https://youtu.be/kDEXsFerzHI?si=C16mQOzXbWNH1Bxs" target="_blank" class="video-card">
+
+                    <img src="https://img.youtube.com/vi/kDEXsFerzHI/maxresdefault.jpg" alt="Capa do vídeo">
+
+                    <div class="video-info">
+                        <h3>Montando uma composteira caseira</h3>
+                        <p>Transforme resíduos orgânicos em adubo com um setup simples.</p>
+                        <span class="tag">Facil</span>
+                    </div>
+
+                </a>
+
+                <!-- CARD 2 -->
+                <a href="https://youtu.be/O_huWRYDoPQ?si=pWvxr5ZX9gYzvq3z" target="_blank" class="video-card">
+
+                    <img src="https://img.youtube.com/vi/O_huWRYDoPQ/maxresdefault.jpg" alt="Capa do vídeo">
+
+                    <div class="video-info">
+                        <h3>Truques para cultivar vasos de temperos</h3>
+                        <p>Dicas de jardinagem e cuidados com plantas aromáticas.</p>
+                        <span class="tag">Medio</span>
+                    </div>
+                </a>
+
+
+                <!-- CARD 3 -->
+                <a href="https://www.youtube.com/watch?v=xxxxxx" target="_blank" class="video-card">
+
+                    <!-- esse video não está mais disponveil  -->
+                    <img src="https://img.youtube.com/vi/xxxxxx/maxresdefault.jpg" alt="Capa do vídeo">
+
+                    <div class="video-info">
+                        <h3>Como cultivar sua horta de temperos</h3>
+                        <p>Seleção de vasos, irrigação e luz ideal.</p>
+                        <span class="tag">#Fácil Video indisponível</span>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/Oyrk7VAVjUY?si=6eEbv1h1lTWwpBBy" target="_blank" class="video-card">
+
+                    <img src="https://img.youtube.com/vi/Oyrk7VAVjUY/maxresdefault.jpg" alt="Capa do vídeo">
+
+                    <div class="video-info">
+                        <h3>Plantando muda de árvore corretamente</h3>
+                        <p>Abrir cova, substrato, tutor, rega de implantação..</p>
+                        <span class="tag">Facil</span>
+                    </div>
+                </a>
+
+                <!-- CARD 5 -->
+                <a href="https://youtu.be/TVlyLGX5E6Y?si=n9Sw5qPM_xLDRqQy" target="_blank" class="video-card">
+
+                    <img src="https://img.youtube.com/vi/TVlyLGX5E6Y/maxresdefault.jpg" alt="Capa do vídeo">
+
+                    <div class="video-info">
+                        <h3>Hotel de abelhas (polinizadores)</h3>
+                        <p>Monte seu abrigo para abelhas solitárias</p>
+                        <span class="tag">Dificl</span>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/IfJ1z6ahgzk?si=8johxF0Gp-b7nuig" target="_blank" class="video-card">
+
+                    <img src="https://img.youtube.com/vi/IfJ1z6ahgzk/maxresdefault.jpg" alt="Capa do vídeo">
+
+                    <div class="video-info">
+                        <h3>Separação de recicláveis sem erro</h3>
+                        <p>Como separar corretamente cada tipo de lixo.</p>
+                        <span class="tag">Facil</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ARTIGOS -->
+        <section class="artigos-section">
+            <h2>Artigos & Leituras</h2>
+            <p class="subtitle">Conteúdo claro e confiável sobre natureza e clima.</p>
+
+            <div class="artigos-grid">
+                <!-- Seus cards de artigos continuam aqui -->
+
+
+                <!-- ARTIGO 1 -->
+                <div class="artigo-card2">
+                    <img src="../../assets/img/guia-verde/artigo-biodiversidade-800w.webp" alt="Capa do artigo">
+
+                    <div class="artigo-content2">
+                        <h3>Corredores de Biodiversidade: conectar florestas salva espécies</h3>
+                        <p>O que são, por que importam e exemplos no Brasil.</p>
+
+                        <div class="tags2">
+                            <span>Leitura 7 min</span>
+                            <span>Biodiversidade</span>
+                            <span>Florestas</span>
+                        </div>
+
+                        <a href="https://blogambiental.com.br/corredores-ecologicos-para-a-conservacao-da-biodiversidade/"
+                            target="_blank" class="btn-artigo2">
+                            Ler no Site Oficial <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ARTIGO 2 -->
+                <div class="artigo-card2">
+                    <img src="../../assets/img/guia-verde/artigo-polinizadores-800w.webp" alt="Capa do artigo">
+
+                    <div class="artigo-content2">
+                        <h3>Polinizadores do Brasil: abelhas nativas, beija-flores e morcegos</h3>
+                        <p>Quem são, plantas amigas e como atrair sem veneno.</p>
+
+                        <div class="tags2">
+                            <span>Leitura 6 min</span>
+                            <span>Polinizadores</span>
+                        </div>
+
+                        <!-- Link externo abre em nova aba --> <!-- corrigido  -->
+                        <a href="https://www.scielo.br/j/ea/a/RtqTgqv8cV5MDZxmHyGyPch/?format=html&lang=pt"
+                            target="_blank" class="btn-artigo2">
+                            Ler no Site Oficial <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ARTIGO 3 -->
+                <div class="artigo-card2">
+                    <img src="../../assets/img/guia-verde/artigo-baleias-jubarte-800w.webp" alt="Capa do artigo">
+
+                    <div class="artigo-content2">
+                        <h3>Baleias-jubarte no Brasil: por que são essenciais para a vida marinha</h3>
+                        <p>Entenda migração, papel ecológico e a recuperação da espécie.</p>
+
+                        <div class="tags2">
+                            <span>Leitura 7 min</span>
+                            <span>Animais marinhos</span>
+                            <span>Jubarte</span>
+                        </div>
+
+
+                        <a href="https://www.baleiajubarte.org.br/a-baleia-jubarte?utm_source" target="_blank"
+                            class="btn-artigo2">
+                            Ler no Site Oficial <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+    <footer aria-label="Rodapé com informações de navegação">
+      <div class="containerFooter">
+        <div class="contentFooter">
+          <div class="logoFooter">
+            <div class="imageFooter">
+              <img
+                src="img/logo-icon 1.png"
+                alt="Logo Plantaê"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="menuFooter">
+            <ul class="menuFooterContent">
+              <li class="menuFooterContentTitle">Explorar</li>
+              <li>Contribuição</li>
+              <li>Guia Verde</li>
+              <li>Mapa</li>
+              <li>Painel</li>
+            </ul>
+            <ul class="menuFooterContent">
+              <li class="menuFooterContentTitle">Projeto</li>
+              <li>Sobre</li>
+              <li>Equipe</li>
+            </ul>
+            <ul class="menuFooterContentSocial">
+              <li class="menuFooterContentTitleSocial">Redes</li>
+              <div class="containerIconsFlex">
+                  <a href="" class="containerIconFooter">
+                      <div class="containerIcon">
+                        <img src="img/mdi_github.png" alt="">
+                      </div>
+                  </a>
+                  <a href="" class="containerIconFooter">
+                      <div class="containerIcon">
+                        <img src="img/instagram.png" alt="">
+                      </div>
+                  </a>
+                  <a href="" class="containerIconFooter">
+                      <div class="containerIcon">
+                        <img src="img/linkedin.png" alt="">
+                      </div>
+                  </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="details">
+          <p>Plantaê © 2025. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    
 </body>
+
 </html>

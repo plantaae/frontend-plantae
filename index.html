@@ -1,12 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="js-global/navbar.js" defer></script>
+    <title>Plantaê</title>
 </head>
 <body>
-    <h1>alalalalalalallaa</h1>
+  <header>
+    <nav class="containerNavbar">
+      <div class="containerImgNavbar">
+        <img src="assets/img/global/logo-negativa.svg" alt="logo Plantaê" />
+      </div>
+      <button id="mobileMenu" class="mobileMenu" aria-controls="menu" aria-expanded="false"
+        aria-label="Abrir menu de navegação">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+      <ul id="menu" class="menu">
+        <li class="home">
+          <a href="#home">Home</a>
+        </li>
+        <li class="guiaVerde">
+          <a href="pages/guia verde-principal/guiaVerde.html">Guia Verde</a>
+        </li>
+        <li class="mapa">
+          <a href="pages/mapa/mapa.html">Mapa</a>
+        </li>
+        <li class="painel">
+          <a href="pages/painel/painel.html">Painel</a>
+        </li>
+        <li class="sobre">
+          <a href="pages/sobre/sobre.html">Sobre</a>
+        </li>
+        <li class="contribuicao">
+          <a class="botaoContribuicao" href="pages/contribuicao/contribuicao.html">
+            <span class="textoContribuicao">Contribuição</span>
+            <div class="botaoContribuicaoParteBranca">
+              <div class="iconContribuicao">
+                <img src="assets/img/global/icon-contribuicao.svg" alt="" aria-hidden="true" />
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <section class="sectionUm">
+    <div class="imagemPlantae">
+        <img src="assets/img/home/hero-1024w.webp" alt="imagemUM">
+    </div>
+
+    <div class="texto">
+        <h2>Floresça com o Plantaê</h2>
+        <br><br>
+        <p class="pargrafoUm">Transforme hábitos em impacto real. Um desafio por vez, <br>
+        uma raiz mais forte no planeta.</p>
+
+      <a href="pages/guia verde-principal/guiaVerde.html" class="containerVerde">
+        <div class="containericone">
+            <div class="containericoneVerde">
+                <img src="assets/img/home/icon-arvore-green.svg" alt="">
+            </div>
+        </div>
+        <p>Começar pela Árvore Virtual</p>
+      </a>
+    </div>
+
+    <div class="info-cards">
+        <div class="card">
+            <h3>+120</h3>
+            <p>Hábitos e desafios prontos para usar</p>
+        </div>
+        <div class="card">
+            <h3>30min</h3>
+            <p>Para começar hoje com um roteiro simples</p>
+        </div>
+        <div class="card">
+            <h3>3 Planos</h3>
+            <p>Free, Estudantil e Institucional</p>
+        </div>
+    </div>
+    </section>
+
+
+<section class="textoVerde">
+    <div class="textov">
+    <h3>Comece sua Jornada verde</h3>
+    <p>Escolha um dos caminhos para começar agora no Plantaê.</p>
+    </div>
+</section>
+
+<section class="arvore">
+<div class="texto2">
+  <h6>GAMIFICAÇÃo</h6>
+  <h3>Plante Sua Árvore Virtual</h3>
+<p>Cada ação é uma semente de esperança.</p>
+<ul>
+    <li><a href="#"></a>Plantar agora</li>
+</ul>
+</div>
+<div class="imgemArvore">
+     <img src="assets/img/home/cta-arvore-virtual-800w.webp" alt="Árvore-virtual">
+
+</div>
+</section>
+
+<section class="mapaVerde">
+    <div class="imagemMapa">
+        <img src="assets/img/home/cta-mapa-verde-800w.webp" alt="Mapa">
+    </div>
+    <div class="textoMapa">
+        <h6>MAPA</h6>
+        <h3>Mapa Verde</h3>
+        <p>Descubra ecopontos, parceiro e ações sustentáveis <br> próximos a você.</p>
+        <ul>
+            <li><a href="#">Explorar mapa</a></li>
+        </ul>
+    </div>
+
+</section>
+
+
+<section class="Quiz">
+    <div class="quizTexto">
+        <h6>QUIZ</h6>
+        <h3>Descubra seu nível verde</h3>
+        <p>Teste seus hábitos e veja o quanto  suas ações ajudam <br> o planeta. Aprenda novas formas de cuidar da <br> natureza bricando!</p>
+        <ul>
+            <li><a href="#"></a>Fazer o quiz</li>
+        </ul>
+    </div>
+    <div class="imagemquiz">
+        <img src="assets/img/home/cta-quiz-verde-800w.webp" alt="imagem do quiz">
+    </div>
+</section>
+
+    <section class="ctaPainel">
+      <div class="ctaImagem">
+        <img src="./cta-bg-painel-impacto-1440w.webp" alt="">
+      </div>
+      <div class="ctaTexto">
+        <h3>Impacto ambiental no Brasil e no mundo</h3>
+        <p>Acompanhe dados, gráficos e metas para entender como suas ações se conectam ao planeta.</p>
+        <a href="#">Ver Painel</a>
+      </div>
+    </section>
+
+      <footer aria-label="Rodapé com informações de navegação">
+      <div class="containerFooter">
+        <div class="contentFooter">
+          <div class="logoFooter">
+            <div class="imageFooter">
+              <img
+                src="assets/img/global/logo-negativa.svg"
+                alt="Logo Plantaê"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="menuFooter">
+            <ul class="menuFooterContent">
+              <li class="menuFooterContentTitle">Explorar</li>
+              <li>Contribuição</li>
+              <li>Guia Verde</li>
+              <li>Mapa</li>
+              <li>Painel</li>
+            </ul>
+            <ul class="menuFooterContent">
+              <li class="menuFooterContentTitle">Projeto</li>
+              <li>Sobre</li>
+              <li>Equipe</li>
+            </ul>
+            <ul class="menuFooterContentSocial">
+              <li class="menuFooterContentTitleSocial">Redes</li>
+              <div class="containerIconsFlex">
+                  <a href="" class="containerIconFooter">
+                      <div class="containerIcon">
+                        <img src="assets/img/global/icon-github.svg" alt="">
+                      </div>
+                  </a>
+                  <a href="" class="containerIconFooter">
+                      <div class="containerIcon">
+                        <img src="assets/img/global/icon-instagram.svg" alt="">
+                      </div>
+                  </a>
+                  <a href="" class="containerIconFooter">
+                      <div class="containerIcon">
+                        <img src="assets/img/global/icon-linkedin.svg" alt="">
+                      </div>
+                  </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="details">
+          <p>Plantaê © 2025. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

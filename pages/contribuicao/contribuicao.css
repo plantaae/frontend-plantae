@@ -1,0 +1,843 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #1c2c27;
+}
+
+.containerNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  height: 15dvh;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.containerImgNavbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.containerImgNavbar img {
+  width: 100%;
+}
+
+.menu {
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+
+.contribuicao {
+  cursor: pointer;
+}
+
+.botaoContribuicao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 35px;
+  border-radius: 40px;
+  background: #2c473e;
+  background: linear-gradient(90deg,
+      rgba(44, 71, 62, 1) 0%,
+      rgba(107, 129, 58, 1) 100%);
+}
+
+.textoContribuicao {
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.botaoContribuicaoParteBranca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 100%;
+  background: #fff;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.iconContribuicao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 32px;
+  height: 4px;
+  background: #fff;
+  margin: 8px;
+  border-radius: 24px;
+}
+
+.home {
+  background: url(img/Containerhome.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.containerHome {
+  display: flex;
+  gap: 96px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  height: 85dvh;
+  margin: 0 auto;
+}
+
+.containerTextoHome {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 75dvw;
+}
+
+.tituloHome {
+  color: #f5f3e6;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.tituloDetalheVerde {
+  color: #6a8e4e;
+}
+
+.textoHome {
+  max-width: 55ch;
+  color: #f5f3e6;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.containerBotoesHome {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  height: 40px;
+}
+
+.containerBotoesHome a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84%;
+}
+
+.containerBotoesHome a:nth-of-type(1) {
+  padding: 10px 24px;
+  background: #b0d182;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  color: #2c473e;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.containerBotoesHome a:nth-of-type(2) {
+  padding: 10px 24px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.containerImgHome {
+  height: 500px;
+  padding: 48px;
+}
+
+.containerImgHome img {
+  width: 300px;
+  height: 100%;
+  border-radius: 24px;
+  border: 2px solid #1c2c27;
+}
+
+.formasDeAjudar {
+  background: #f5f3e6;
+}
+
+.containerFormasDeAjudar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tituloFormasDeAjudar {
+  margin-top: 144px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #2c473e;
+}
+
+.textoFormasDeAjudar {
+  max-width: 76ch;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.containerCardsFormasDeAjudar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+  margin-bottom: 160px;
+}
+
+.containerCardFormasDeAjudar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 221px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.containerImgFormasDeAjudarUm,
+.containerImgFormasDeAjudarQuatro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(106, 142, 78, 0.08);
+}
+
+.tituloCardFormasDeAjudar {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #2c473e;
+}
+
+.textoCardFormasDeAjudar {
+  width: 100%;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.linkFormasDeAjudarUm,
+.linkFormasDeAjudarQuatro {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6a8e4e;
+}
+
+.setaLinkFormasDeAjudarUm,
+.setaLinkFormasDeAjudarQuatro {
+  margin-left: 24px;
+}
+
+.containerImgFormasDeAjudarDois {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(176, 209, 130, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.linkFormasDeAjudarDois {
+  position: relative;
+  bottom: -24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b0d182;
+}
+
+.setaLinkFormasDeAjudarDois {
+  margin-left: 24px;
+}
+
+.containerImgFormasDeAjudarTres {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(10, 103, 148, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.linkFormasDeAjudarTres {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a6794;
+}
+
+.setaLinkFormasDeAjudarTres {
+  margin-left: 24px;
+}
+
+.containerConectePlantae {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tituloConectePlantae {
+  margin-top: 144px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #2c473e;
+}
+
+.textoConectePlantae {
+  max-width: 70ch;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.containerCardsConectePlantae {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+  margin-bottom: 160px;
+}
+
+.containerCardConectePlantae {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 221px;
+  padding: 24px;
+  background: #f5f3e6;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.containerImgConectePlantaeUm,
+.containerImgConectePlantaeQuatro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(106, 142, 78, 0.08);
+}
+
+.tituloCardConectePlantae {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #2c473e;
+}
+
+.textoCardConectePlantae {
+  width: 100%;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.tagConectePlantae {
+  width: max-content;
+  padding: 2px 8px;
+  background: #e8e9d7;
+  border-radius: 8px;
+  color: #2c473e;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.containerImgConectePlantaeDois {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(176, 209, 130, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.containerImgConectePlantaeTres {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(10, 103, 148, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.instituicoes {
+  background: #f5f3e6;
+}
+
+.containerInstituicoes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tituloInstituicoes {
+  margin-top: 144px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #2c473e;
+}
+
+.textoInstituicoes {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.containerCardsInstituicoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+  margin-bottom: 160px;
+}
+
+.containerCardInstituicoes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 280px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.tituloCardInstituicoes {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #2c473e;
+}
+
+.tagInstituicoes {
+  width: max-content;
+  padding: 2px 8px;
+  background: rgba(10, 103, 148, 0.1);
+  border-radius: 8px;
+  color: #0a6794;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.textoCardInstituicoes {
+  width: 100%;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.containerBotaoInstituicoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  max-width: 100%;
+  padding: 8px 38px;
+  background: none;
+  border: 1px solid #0a6794;
+  border-radius: 8px;
+}
+
+.containerBotaoInstituicoes a {
+  color: #0a6794;
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.containerImgBotaoInstituicoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerImpactoEBeneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tituloImpactoEBeneficios {
+  margin-top: 144px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #2c473e;
+}
+
+.textoImpactoEBeneficios {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.containerCardsImpactoEBeneficios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+  margin-bottom: 160px;
+}
+
+.containerCardImpactoEBeneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 280px;
+  padding: 24px;
+  background: #fff;
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(245, 243, 230, 1) 100%);
+  border: 1px solid rgba(44, 71, 62, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.tituloCardImpactoEBeneficios {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #2c473e;
+}
+
+.textoCardImpactoEBeneficios {
+  width: 100%;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.faq {
+  background: #f5f3e6;
+}
+
+.containerFaq {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tituloFaq {
+  margin-top: 144px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #2c473e;
+}
+
+.containerTextoFaq p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+.containerCardsFaq {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 160px;
+}
+
+.containerCardFaq {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  padding: 24px;
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+}
+
+.tituloCardFaq {
+  color: #2C473E;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.containerRespostaFaq {
+  width: 100%;
+  padding: 24px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: rgba(44, 71, 62, 0.7);
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+footer {
+  background: #2c473e;
+}
+
+.containerFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 86px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+
+.contentFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 96px;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+.logoFooter {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  gap: 18px;
+}
+
+.menuFooter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 96px;
+}
+
+.menuFooterContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menuFooterContent .menuFooterContentTitle {
+  margin-bottom: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menuFooterContent li {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menuFooterContentSocial {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menuFooterContentSocial .menuFooterContentTitleSocial {
+  margin-bottom: 12px;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+}
+
+.containerIconsFlex {
+  display: flex;
+  gap: 16px;
+}
+
+.details {
+  margin: 24px;
+  border-top: 1px solid #c1c7cd;
+}
+
+.details p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  color: #fff;
+}
+
+@media (max-width: 990px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .mobileMenu {
+    display: block;
+    background: transparent;
+    border: none;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 48px;
+    position: absolute;
+    top: 15dvh;
+    right: 0;
+    width: 295px;
+    height: 85dvh;
+    background: #1c2c27;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .linkHome {
+    margin-top: 24px;
+  }
+
+  .containerHome {
+    height: max-content;
+    padding-top: 48px;
+    padding: 20px;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .containerBotoesHome a {
+    width: 100%;
+  }
+
+  .containerImgHome {
+    width: 100%;
+    height: 100%;
+  }
+
+  .containerImgHome img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .containerCardsFormasDeAjudar {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .containerConectePlantae {
+    padding: 20px;
+  }
+
+  .containerCardConectePlantae {
+    justify-content: center;
+  }
+}
+
+/*Media querie do footer*/
+@media (max-width: 769px) {
+
+  .contentFooter,
+  .menuFooter {
+    flex-direction: column;
+  }
+}

@@ -1,12 +1,250 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="mapa.js" defer></script>
+    <script src="../../js-global/navbar.js" defer></script>
     <link rel="stylesheet" href="mapa.css">
     <title>Mapa</title>
 </head>
+
 <body>
-    <h1>Mapa</h1>
+    <main>
+        <div class="container-caixaTopo">
+            <div class="caixaImg">
+                <img src="img/Vector.png" />
+            </div>
+
+            <h1>Mapa Verde</h1>
+
+            <p>
+                Explore locais ecologicamente responsáveis perto de você. Encontre
+                pontos de coleta, áreas <br />
+                verdes, ONGs ambientais, feiras sustentáveis e muito mais para
+                fortalecer seus hábitos <br />
+                conscientes.
+            </p>
+        </div>
+    </main>
+
+    <section class="pesquisas">
+        <div class="pesquisaPrincipal">
+            <input type="text" id="input-endereco" class="pesquisar" placeholder="Buscar por endereço ou bairro" />
+            <button id="btn-pesquisar-endereco" class="local-btn">
+                <img src="img/LocalizaIcon.png" alt="location" /> Buscar endereço
+            </button>
+        </div>
+
+        <div class="btn-filtros">
+            <button>Reciclagem</button>
+            <button>Coleta Seletiva</button>
+            <button>Pontos de entrega</button>
+            <button>Parques e áreas verdes</button>
+            <button>ONGs ambientais</button>
+            <button>Feiras e eventos</button>
+        </div>
+    </section>
+
+    <section class="area-mapa">
+        <aside class="sidebar" aria-label="Pontos">
+            <div class="caixah3p">
+                <h3>Locais mapeados</h3>
+                <p>12 pontos cadastrados neste mapa</p>
+            </div>
+            <ul class="sidebar-pontos">
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Ecoponto Têxtil Brás</h4>
+                        <div class="muted">
+                            Ecoponto exclusivo para restos de tecido e resíduos têxteis da
+                            região do Brás.<br /><br /><img src="img/IconEndereco.png" alt="endereco" />
+                            Rua Cachoeira, 958 – Catumbi, São Paulo/SP<br /><img src="img/IconHorario.png"
+                                alt="horario" />
+                            Todos os dias: 24h
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Cooperativa Vira Lata</h4>
+                        <div class="muted">
+                            Cooperativa que atua há mais de 20 anos na coleta, triagem e
+                            comercialização de recicláveis, com foco especial em vidro<br /><br /><img
+                                src="img/IconEndereco.png" alt="endereco" />
+                            Rua Nella Murari Rosa, 40 – Jardim Jaqueline, São Paulo/SP<br /><img
+                                src="img/IconHorario.png" alt="horario" />
+                            Consultar no site oficial.
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>COOPERCAPS – Matriz</h4>
+                        <div class="muted">
+                            Cooperativa de coleta seletiva que opera centrais de triagem e
+                            ações de educação ambiental na cidade.<br /><br /><img src="img/IconEndereco.png"
+                                alt="endereco" />
+                            Avenida João Paulo da Silva, 48 – Cidade Dutra, São Paulo/SP
+                            <br /><img src="img/IconHorario.png" alt="horario" /> Consultar
+                            no site oficial.
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Estação de Reciclagem Assaí</h4>
+                        <div class="muted">
+                            Ponto de entrega voluntária em loja de atacarejo, recebe papel,
+                            plástico, metal, vidro e longa vida, operado em parceria com
+                            cooperativa de reciclagem.<br /><br /><img src="img/IconEndereco.png" alt="endereco" />
+                            Av. Prof. Francisco Morato, 4367 – Vila Sônia, São Paulo/SP<br /><img
+                                src="img/IconHorario.png" alt="horario" />
+                            Em geral segue o horário da loja Assaí Vila Sônia.
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Condô Cultural – Ponto de Compostagem Comunitária</h4>
+                        <div class="muted">
+                            Ponto de compostagem comunitária que recebe resíduos orgânicos
+                            de moradores e transforma em adubo para o jardim e a
+                            vizinhança.<br /><br /><img src="img/IconEndereco.png" alt="endereco" />
+                            Rua Mundo Novo, 342 – Vila Anglo Brasileira, São Paulo/SP<br /><img
+                                src="img/IconHorario.png" alt="horario" />
+                            Geralmente sábados ou domingos, por volta de 11h–14h (varia
+                            conforme programação, indicado no site).
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Parque Ibirapuera</h4>
+                        <div class="muted">
+                            Um dos parques urbanos mais importantes de São Paulo, com áreas
+                            verdes, ciclovias, museus e lago.<br /><br /><img src="img/IconEndereco.png"
+                                alt="endereco" />
+                            Av. Pedro Álvares Cabral, s/n – Vila Mariana, São Paulo/SP<br /><img
+                                src="img/IconHorario.png" alt="horario" />
+                            Todos os dias: 5h às 23h
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Parque Villa-Lobos</h4>
+                        <div class="muted">
+                            Parque com ciclovias, campos, bosque e áreas de lazer às margens
+                            do Rio Pinheiros.<br /><br /><img src="img/IconEndereco.png" alt="endereco" />
+                            Av. Professor Fonseca Rodrigues, 2001 – Alto de Pinheiros, São
+                            Paulo/SP<br /><img src="img/IconHorario.png" alt="horario" />
+                            Todos os dias: 5h30 às 19h
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Parque Ecológico do Tietê – Núcleo Eng. Goulart</h4>
+                        <div class="muted">
+                            Grande área de preservação com trilhas, lagos, equipamentos
+                            esportivos e ações de educação ambiental.<br /><br /><img src="img/IconEndereco.png"
+                                alt="endereco" />
+                            Rua Guirá Acangatara, 70 – Engenheiro Goulart, São Paulo/SP<br /><img
+                                src="img/IconHorario.png" alt="horario" />
+                            Todos os dias: 6h às 17h
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Iniciativa Verde</h4>
+                        <div class="muted">
+                            ONG focada em restauração florestal, combate às mudanças
+                            climáticas e desenvolvimento rural sustentável.<br /><br /><img src="img/IconEndereco.png"
+                                alt="endereco" />
+                            Rua João Elias Saada, 46 – Pinheiros, São Paulo/SP<br /><img src="img/IconHorario.png"
+                                alt="horario" />
+                            Consultar no site oficial.
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Agência Ambiental Pick-upau</h4>
+                        <div class="muted">
+                            ONG ambientalista que atua na defesa do meio ambiente, pesquisas
+                            e projetos de conservação, com destaque para proteção de
+                            aves.<br /><br /><img src="img/IconEndereco.png" alt="endereco" />
+                            Av. dos Ourives, 560 – Jardim São Savério, São Paulo/SP<br /><img src="img/IconHorario.png"
+                                alt="horario" />
+                            Consultar no site oficial.
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Feira Orgânica da AAO – Parque da Água Branca</h4>
+                        <div class="muted">
+                            Feira de produtores orgânicos organizada pela Associação de
+                            Agricultura Orgânica (AAO), com frutas, verduras, laticínios e
+                            comidas prontas.<br /><br /><img src="img/IconEndereco.png" alt="endereco" />
+                            Parque da Água Branca – Av. Francisco Matarazzo, 455 – Água
+                            Branca, São Paulo/SP<br /><img src="img/IconHorario.png" alt="horario" />
+                            Terça, sábado e domingo - 7h às 12h
+                        </div>
+                    </div>
+                </li>
+                <li class="sidebar-item">
+                    <div>
+                        <h4>Feira de Produtos Orgânicos do Modelódromo do Ibirapuera</h4>
+                        <div class="muted">
+                            Feira de produtos orgânicos realizada na região do Ibirapuera,
+                            com diversos produtores locais.<br /><br /><img src="img/IconEndereco.png" alt="endereco" />
+                            Rua Curitiba, 292 – Vila Mariana, São Paulo/SP<br /><img src="img/IconHorario.png"
+                                alt="horario" />
+                            Sábados - 7h às 13h
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <div id="map"></div>
+    </section>
+
+    <section class="navegacao">
+        <p>
+            Encontre lugares que combinam com seus<br />hábitos sustentáveis no
+            Plantaê
+        </p>
+
+        <div class="btn-navegacao">
+            <button>
+                <img src="img/IconTutorial.png" alt="livro" /> Ver tutoriais
+            </button>
+            <button>
+                <img src="img/IconArtigos.png" alt="papel" /> Ler artigos
+            </button>
+            <button>
+                <img src="img/IconPainel.png" alt="painel" /> Acompanhar no painel
+            </button>
+        </div>
+    </section>
+    <a href="#map">
+        <section class="info">
+            <img src="img/IconInfo.png" alt="infoIcon" />
+            <h5>Como usar o mapa verde</h5>
+            <p>
+                Use os filtros para encontrar o tipo de local que você procura. Clique
+                nos marcadores no mapa ou nos cards da lista para ver mais<br />informações.
+            </p>
+        </section>
+    </a>
 </body>
+
 </html>
