@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F5F3E6;
+}
+
+header {
+    background: #1c2c27;
+}
+
+.containerNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    height: 15dvh;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.containerImgNavbar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.containerImgNavbar img {
+    width: 50%;
+}
+
+.menu {
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a,
+a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.menu li a:hover {
+    color: #c2c2c2;
+}
+
+.containerBotaoInstituicoes {
+    transition: all 0.4s ease;
+}
+
+.containerBotaoInstituicoes a {
+    transition: none;
+}
+
+a:hover,
+.containerBotaoInstituicoes:hover {
+    transform: translateY(-3px);
+}
+
+.contribuicao {
+    cursor: pointer;
+}
+
+.botaoContribuicao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 35px;
+    border-radius: 40px;
+    background: #2c473e;
+    background: linear-gradient(90deg,
+            rgba(44, 71, 62, 1) 0%,
+            rgba(107, 129, 58, 1) 100%);
+}
+
+.textoContribuicao {
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.botaoContribuicaoParteBranca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 100%;
+    background: #fff;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.iconContribuicao {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.iconContribuicao {
+    height: 100%;
+}
+
+
+.mobileMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.line {
+    width: 32px;
+    height: 4px;
+    background: #fff;
+    margin: 8px;
+    border-radius: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 64px;
+}
+
+.containerDadosAmbientais,
+.containerResultadoPlantae {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 1200px;
+    max-width: 100%;
+    height: max-content;
+    margin: 0 auto;
+}
+
+.containerCardsDadosAmbientais,
+.containerCardsResultadoPlantae {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.containerCardDadosAmbientais {
+    max-width: 282px;
+    width: 100%;
+    padding: 24px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+}
+
+.containerImgCardDadosAmbientaisUm,
+.containerImgCardResultadoPlantaeUm,
+.containerImgCardResultadoPlantaeDois,
+.containerImgCardResultadoPlantaeTres,
+.containerImgCardResultadoPlantaeQuatro {
+    width: max-content;
+    padding: 12px;
+    background: rgba(106, 142, 78, 0.08);
+    border-radius: 14px;
+}
+
+.tituloDadosAmbientais {
+    color: #2C473E;
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.tituloCardDadosAmbientais,
+.tituloCardResultadoPlantae {
+    margin-top: 16px;
+    color: rgba(44, 71, 62, 0.70);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dadoCardDadosAmbientais,
+.dadoCardResultadoPlantae {
+    margin-top: 12px;
+    color: #2C473E;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.subtituloCardDadosAmbientais,
+.subtituloCardResultadoPlantae {
+    margin-top: 2px;
+    color: rgba(44, 71, 62, 0.60);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.textoCardDadosAmbientais {
+    margin-top: 16px;
+    color: rgba(44, 71, 62, 0.70);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.fonteCardDadosAmbientais {
+    margin-top: 12px;
+    color: rgba(44, 71, 62, 0.50);
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.containerImgCardDadosAmbientaisDois {
+    width: max-content;
+    padding: 12px;
+    background: rgba(176, 209, 130, 0.21);
+    border-radius: 14px;
+}
+
+.containerImgCardDadosAmbientaisTres {
+    width: max-content;
+    padding: 12px;
+    background: #EBF2F6;
+    border-radius: 14px;
+}
+
+.containerImgCardDadosAmbientaisQuatro {
+    width: max-content;
+    padding: 12px;
+    background: rgba(44, 71, 62, 0.08);
+    border-radius: 14px;
+}
+
+.tituloResultadoPlantae {
+    color: #2C473E;
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.textoResultadoPlantae {
+    color: rgba(44, 71, 62, 0.70);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+
+.containerCardResultadoPlantae {
+    max-width: 100%;
+    width: 282px;
+    height: max-content;
+    padding: 24px;
+    border: 1px solid rgba(44, 71, 62, 0.05);
+    border-radius: 16px;
+    background: linear-gradient(135deg, #FFF 0%, rgba(106, 142, 78, 0.04) 100%);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+}
+
+.textoCardResultadoPlantae {
+    color: rgba(44, 71, 62, 0.70);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dadoCardResultadoPlantae {
+    margin-top: 8px;
+}
+
+.containerImgCardResultadoPlantaeDois {
+    background: rgba(44, 71, 62, 0.08);
+}
+
+.containerImgCardResultadoPlantaeTres {
+    background: rgba(10, 103, 148, 0.08);
+}
+
+.containerImgCardResultadoPlantaeQuatro {
+    background: rgba(176, 209, 130, 0.08);
+}
+
+.transformeDados {
+    margin-bottom: 158px;
+}
+
+.containerTransformeDados {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 48px 0;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #6A8E4E 0%, #2C473E 100%);
+}
+
+.containerEtiquetaTransformeDados {
+    display: flex;
+    width: max-content;
+    padding: 8px 28px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.containerEtiquetaTransformeDados p {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.tituloTransformeDados {
+    margin-top: 17px;
+    margin-bottom: 10px;
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.textoTransformeDados {
+    max-width: 54ch;
+    color: rgba(255, 255, 255, 0.90);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.botaoTransformeDados {
+    padding: 16px 32px;
+    border-radius: 14px;
+    background: #FFF;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+    color: #2C473E;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+footer {
+    background: #2c473e;
+}
+
+.containerFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 48px;
+}
+
+.contentFooter {
+    display: flex;
+    justify-content: space-between;
+    gap: 96px;
+    flex-wrap: wrap;
+    padding: 24px;
+}
+
+.logoFooter {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    gap: 18px;
+}
+
+.menuFooter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 96px;
+}
+
+.menuFooterContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menuFooterContent .menuFooterContentTitle {
+    margin-bottom: 12px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menuFooterContent li {
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menuFooterContentSocial {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menuFooterContentSocial .menuFooterContentTitleSocial {
+    margin-bottom: 12px;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+}
+
+.containerIconsFlex {
+    display: flex;
+    gap: 16px;
+}
+
+.details {
+    margin: 24px;
+    border-top: 1px solid #c1c7cd;
+}
+
+.details p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 48px;
+    padding-bottom: 24px;
+    color: #fff;
+}
+
+@media (max-width: 990px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .mobileMenu {
+        display: block;
+        background: transparent;
+        border: none;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 48px;
+        position: absolute;
+        top: 15dvh;
+        right: 0;
+        width: 295px;
+        height: 85dvh;
+        background: #1c2c27;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        z-index: 1;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .linkHome {
+        margin-top: 24px;
+    }
+}
+
+/*Media querie do footer*/
+@media (max-width: 769px) {
+
+    .contentFooter,
+    .menuFooter {
+        flex-direction: column;
+    }
+}

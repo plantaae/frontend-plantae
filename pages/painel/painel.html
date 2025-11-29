@@ -4,9 +4,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="painel.css">
+    <script src="../../js-global/navbar.js" defer></script>
     <title>Painel</title>
 </head>
 <body>
-    <h1>Painel</h1>
+    <header>
+        <nav class="containerNavbar">
+            <div class="containerImgNavbar">
+                <img src="../../assets/img/global/logo-principal.svg" alt="logo Plantaê" />
+            </div>
+            <button id="mobileMenu" class="mobileMenu" aria-controls="menu" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+                <div id="lineUm" class="line"></div>
+                <div id="lineDois" class="line"></div>
+                <div id="lineTres" class="line"></div>
+                <div id="teste" class="teste"></div>
+            </button>
+            <ul id="menu" class="menu">
+                <li class="linkHome">
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../guia verde-principal/guiaVerde.html">Guia Verde</a>
+                </li>
+                <li>
+                    <a href="../mapa/mapa.html">Mapa</a>
+                </li>
+                <li>
+                    <a href="../painel/painel.html">Painel</a>
+                </li>
+                <li>
+                    <a href="../sobre/sobre.html">Sobre</a>
+                </li>
+                <li class="contribuicao">
+                    <a class="botaoContribuicao" href="/">
+                        <span class="textoContribuicao">Contribuição</span>
+                        <div class="botaoContribuicaoParteBranca">
+                            <div class="iconContribuicao">
+                                <img src="../../assets/img/global/icon-contribuicao.svg" alt="" aria-hidden="true" />
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="dadosAmbientais">
+            <section class="containerDadosAmbientais">
+                <h2 class="tituloDadosAmbientais">Dados ambientais do Brasil</h2>
+                <div class="containerCardsDadosAmbientais">
+                    <section class="containerCardDadosAmbientais">
+                        <div class="containerImgCardDadosAmbientaisUm">
+                            <svg class="imgCardDadosAmbientaisUm" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M10 11V17" stroke="#6A8E4E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M14 11V17" stroke="#6A8E4E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6"
+                                    stroke="#6A8E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3 6H21" stroke="#6A8E4E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6"
+                                    stroke="#6A8E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardDadosAmbientais">Lixo gerado por pessoas no Brasil</h3>
+                        <p class="dadoCardDadosAmbientais">1,07 kg</p>
+                        <p class="subtituloCardDadosAmbientais">por dia</p>
+                        <p class="textoCardDadosAmbientais">Cada pessoa no Brasil gera, em média, 1,07 kg de resíduos
+                            por dia.</p>
+                        <p class="fonteCardDadosAmbientais">Fonte: ABRELPE, Panorama dos Resíduos Sólidos 2020</p>
+                    </section>
+                    <section class="containerCardDadosAmbientais">
+                        <div class="containerImgCardDadosAmbientaisDois">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M7.00001 19H4.81501C4.49958 19.0009 4.18927 18.9203 3.91418 18.7659C3.6391 18.6116 3.40859 18.3887 3.24501 18.119C3.08792 17.8481 3.00486 17.5407 3.00415 17.2275C3.00345 16.9144 3.08514 16.6066 3.24101 16.335L7.19601 9.5"
+                                    stroke="#B0D182" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M11 19H19.203C19.5169 18.9976 19.8249 18.9145 20.0974 18.7586C20.3699 18.6027 20.5978 18.3794 20.759 18.11C20.9139 17.8399 20.9954 17.5339 20.9954 17.2225C20.9954 16.9111 20.9139 16.6052 20.759 16.335L19.533 14.215"
+                                    stroke="#B0D182" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14 16L11 19L14 22" stroke="#B0D182" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8.29298 13.596L7.19598 9.5L3.09998 10.598" stroke="#B0D182" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9.34399 5.811L10.437 3.919C10.5939 3.6454 10.8189 3.41701 11.0902 3.25599C11.3614 3.09497 11.6696 3.00679 11.985 3C12.2979 2.99942 12.6055 3.08116 12.8769 3.23703C13.1482 3.39289 13.3738 3.6174 13.531 3.888L17.474 10.731"
+                                    stroke="#B0D182" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.3781 9.63301L17.4741 10.731L18.5711 6.63501" stroke="#B0D182"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardDadosAmbientais">Taxa de reciclagem no país</h3>
+                        <p class="dadoCardDadosAmbientais">8%</p>
+                        <p class="subtituloCardDadosAmbientais">reciclado</p>
+                        <p class="textoCardDadosAmbientais">Aproximadamente 8% dos resíduos recicláveis gerados no
+                            Brasil são de fato reciclados.</p>
+                        <p class="fonteCardDadosAmbientais">Fonte: ABREMA, Panorama de Resíduos no Brasil 2024 (dados de
+                            2023).</p>
+                    </section>
+                    <section class="containerCardDadosAmbientais">
+                        <div class="containerImgCardDadosAmbientaisTres">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M12 22C13.8565 22 15.637 21.2625 16.9497 19.9497C18.2625 18.637 19 16.8565 19 15C19 13 18 11.1 16 9.5C14 7.9 12.5 5.5 12 3C11.5 5.5 10 7.9 8 9.5C6 11.1 5 13 5 15C5 16.8565 5.7375 18.637 7.05025 19.9497C8.36301 21.2625 10.1435 22 12 22Z"
+                                    stroke="#0A6794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardDadosAmbientais">Consumo médio de água</h3>
+                        <p class="dadoCardDadosAmbientais">175 L</p>
+                        <p class="subtituloCardDadosAmbientais">por dia</p>
+                        <p class="textoCardDadosAmbientais">O consumo médio de água no Brasil é de cerca de 175 litros
+                            por pessoa por dia.</p>
+                        <p class="fonteCardDadosAmbientais">Fonte: SNIS 2023, via Agência Cenarium.</p>
+                    </section>
+                    <section class="containerCardDadosAmbientais">
+                        <div class="containerImgCardDadosAmbientaisQuatro">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M17.5 19H9.00004C7.7019 18.9997 6.42943 18.6384 5.32481 17.9565C4.2202 17.2746 3.32696 16.2989 2.74491 15.1386C2.16286 13.9783 1.91493 12.679 2.02883 11.3858C2.14273 10.0927 2.61397 8.85671 3.38988 7.81598C4.1658 6.77526 5.21583 5.97079 6.42264 5.49249C7.62944 5.01418 8.94548 4.88087 10.2237 5.10747C11.5019 5.33406 12.6919 5.91162 13.6608 6.77561C14.6296 7.6396 15.3391 8.75598 15.71 10H17.5C18.6935 10 19.8381 10.4741 20.682 11.318C21.5259 12.1619 22 13.3065 22 14.5C22 15.6935 21.5259 16.8381 20.682 17.682C19.8381 18.5259 18.6935 19 17.5 19Z"
+                                    stroke="#2C473E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardDadosAmbientais">Emissões de C0² por pessoa</h3>
+                        <p class="dadoCardDadosAmbientais">2,27 t</p>
+                        <p class="subtituloCardDadosAmbientais">por ano</p>
+                        <p class="textoCardDadosAmbientais">Cada pessoa no Brasil emite em média 2,27 toneladas de CO₂
+                            por ano, valor abaixo da média mundial.</p>
+                        <p class="fonteCardDadosAmbientais">Fonte: TheGlobalEconomy.com, dados de 2023.</p>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div class="resultadoPlantae">
+            <section class="containerResultadoPlantae">
+                <h2 class="tituloResultadoPlantae">Seus resultados no Plantaê</h2>
+                <p class="textoResultadoPlantae">texto</p>
+                <div class="containerCardsResultadoPlantae">
+                    <section class="containerCardResultadoPlantae">
+                        <div class="containerImgCardResultadoPlantaeUm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    stroke="#6A8E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9 12L11 14L15 10" stroke="#6A8E4E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardResultadoPlantae">Ações concluídas no site</h3>
+                        <p class="dadoCardResultadoPlantae">32</p>
+                        <p class="subtituloCardResultadoPlantae">ações concluídas</p>
+                    </section>
+                    <section class="containerCardResultadoPlantae">
+                        <div class="containerImgCardResultadoPlantaeDois">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.9 18.1185C15.4413 19.8318 15.429 21.2608 15.863 22.4055C16.6605 24.5095 19.463 25.115 19.595 25.6665C19.727 26.218 15.863 26.5 13.679 26.5C11.4955 26.5 8.817 26.0835 8.817 25.6665C8.817 25.25 11.359 24.697 12.1315 22.3665C12.5815 21.0078 12.5322 19.4477 11.9835 17.686C11.8468 17.7288 11.7043 17.7504 11.561 17.75C10.9655 17.75 10.4695 17.385 10.3625 16.903C9.9515 17.173 9.4365 17.333 8.878 17.333C7.673 17.333 6.6725 16.587 6.4745 15.606C6.30297 15.6466 6.12727 15.6669 5.951 15.6665C4.8735 15.6665 4 14.9205 4 14C4 13.3785 4.398 12.8365 4.9885 12.55C4.685 12.3605 4.488 12.054 4.488 11.7085C4.48867 11.5878 4.51117 11.4735 4.5555 11.3655C4.221 11.217 4 10.96 4 10.6665C4 10.303 4.341 9.994 4.816 9.88C4.3185 9.575 4 9.107 4 8.5835C4 7.752 4.8015 7.0635 5.8495 6.937C5.60243 6.63798 5.4661 6.26288 5.4635 5.875C5.4635 4.8395 6.446 4 7.6585 4C7.7805 4 7.90017 4.00833 8.0175 4.025C8.31 3.2835 9.131 2.75 10.0975 2.75C10.366 2.75 10.623 2.791 10.861 2.8665C11.026 2.0895 11.823 1.5 12.78 1.5C13.759 1.5 14.57 2.116 14.71 2.9185C15.0675 2.5605 15.6 2.3335 16.195 2.3335C17.2725 2.3335 18.146 3.0795 18.146 4C18.146 4.31 18.0465 4.6005 17.874 4.8495C17.9627 4.83883 18.0533 4.8335 18.146 4.8335C19.149 4.8335 19.976 5.48 20.085 6.3125C20.3919 6.16034 20.73 6.08192 21.0725 6.0835C22.1505 6.0835 23.024 6.8295 23.024 7.75C23.024 8.3775 22.618 8.924 22.018 9.2085C22.618 9.4925 23.024 10.039 23.024 10.6665C23.024 11.2115 22.7175 11.696 22.244 12C22.427 12.209 22.536 12.4685 22.536 12.75C22.5357 12.8583 22.5203 12.9623 22.49 13.062C23.39 13.4885 23.9995 14.3085 23.9995 15.25C23.9995 16.6305 22.6895 17.75 21.0725 17.75C20.6693 17.751 20.2692 17.6792 19.8915 17.538C19.4485 17.926 18.83 18.1665 18.146 18.1665C17.6227 18.171 17.1094 18.0234 16.6685 17.7415C16.4585 17.92 16.195 18.052 15.9 18.1185Z"
+                                    fill="#2C473E" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardResultadoPlantae">Nível da sua árvore virtual</h3>
+                        <p class="dadoCardResultadoPlantae">Nível 3</p>
+                        <p class="subtituloCardResultadoPlantae">Árvore florescendo</p>
+                    </section>
+                    <section class="containerCardResultadoPlantae">
+                        <div class="containerImgCardResultadoPlantaeTres">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M17.5 19H9.00004C7.7019 18.9997 6.42943 18.6384 5.32481 17.9565C4.2202 17.2746 3.32696 16.2989 2.74491 15.1386C2.16286 13.9783 1.91493 12.679 2.02883 11.3858C2.14273 10.0927 2.61397 8.85671 3.38988 7.81598C4.1658 6.77526 5.21583 5.97079 6.42264 5.49249C7.62944 5.01418 8.94548 4.88087 10.2237 5.10747C11.5019 5.33406 12.6919 5.91162 13.6608 6.77561C14.6296 7.6396 15.3391 8.75598 15.71 10H17.5C18.6935 10 19.8381 10.4741 20.682 11.318C21.5259 12.1619 22 13.3065 22 14.5C22 15.6935 21.5259 16.8381 20.682 17.682C19.8381 18.5259 18.6935 19 17.5 19Z"
+                                    stroke="#0A6794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardResultadoPlantae">CO² evitado com suas ações</h3>
+                        <p class="dadoCardResultadoPlantae">14,2 kg</p>
+                        <p class="subtituloCardResultadoPlantae">De CO²</p>
+                    </section>
+                    <section class="containerCardResultadoPlantae">
+                        <div class="containerImgCardResultadoPlantaeQuatro">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M8 2V6" stroke="#B0D182" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M16 2V6" stroke="#B0D182" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
+                                    stroke="#B0D182" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3 10H21" stroke="#B0D182" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="tituloCardResultadoPlantae">Dias seguidos de participação</h3>
+                        <p class="dadoCardResultadoPlantae">5</p>
+                        <p class="subtituloCardResultadoPlantae">Dias consecutivos ativo</p>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div class="transformeDados">
+            <div class="containerTransformeDados">
+                <div class="containerTextoTransformeDados">
+                    <div class="containerEtiquetaTransformeDados">
+                        <p>Continue sua jornada</p>
+                    </div>
+                    <h3 class="tituloTransformeDados">Transforme dados em ação</h3>
+                    <p class="textoTransformeDados">Use o Plantaê para acompanhar seus hábitos, aprender com os conteúdos e apoiar iniciativas que cuidam do planeta.</p>
+                </div>
+                <a class="botaoTransformeDados">Explorar tutoriais e desafios →</a>
+            </div>
+        </div>
+    </main>
+    <footer aria-label="Rodapé com informações de navegação">
+        <div class="containerFooter">
+            <div class="contentFooter">
+                <div class="logoFooter">
+                    <div class="imageFooter">
+                        <img src="../../assets/img/global/logo-principal.svg" alt="Logo Plantaê" loading="lazy" />
+                    </div>
+                </div>
+                <div class="menuFooter">
+                    <ul class="menuFooterContent">
+                        <li class="menuFooterContentTitle">Explorar</li>
+                        <li>Contribuição</li>
+                        <li>Guia Verde</li>
+                        <li>Mapa</li>
+                        <li>Painel</li>
+                    </ul>
+                    <ul class="menuFooterContent">
+                        <li class="menuFooterContentTitle">Projeto</li>
+                        <li>Sobre</li>
+                        <li>Equipe</li>
+                    </ul>
+                    <ul class="menuFooterContentSocial">
+                        <li class="menuFooterContentTitleSocial">Redes</li>
+                        <div class="containerIconsFlex">
+                            <a href="https://github.com/plantaae" target="_blank" class="containerIconFooter">
+                                <div class="containerIcon">
+                                    <img src="../../assets/img/global/icon-github.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="" class="containerIconFooter">
+                                <div class="containerIcon">
+                                    <img src="../../assets/img/global/icon-instagram.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="" class="containerIconFooter">
+                                <div class="containerIcon">
+                                    <img src="../../assets/img/global/icon-linkedin.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="details">
+                <p>Plantaê © 2025. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
