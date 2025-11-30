@@ -8,8 +8,48 @@
     <title>Document</title>
 </head>
 <body>
+  <header>
+        <nav class="containerNavbar">
+            <div class="containerImgNavbar">
+                <img src="../../assets/img/global/logo-principal.svg" alt="logo Plantaê" />
+            </div>
+            <button id="mobileMenu" class="mobileMenu" aria-controls="menu" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+                <div id="lineUm" class="line"></div>
+                <div id="lineDois" class="line"></div>
+                <div id="lineTres" class="line"></div>
+                <div id="teste" class="teste"></div>
+            </button>
+            <ul id="menu" class="menu">
+                <li class="linkHome">
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../guia verde-principal/guiaVerde.html">Guia Verde</a>
+                </li>
+                <li>
+                    <a href="../mapa/mapa.html">Mapa</a>
+                </li>
+                <li>
+                    <a href="../painel/painel.html">Painel</a>
+                </li>
+                <li>
+                    <a href="../sobre/sobre.html">Sobre</a>
+                </li>
+                <li class="contribuicao">
+                    <a class="botaoContribuicao" href="../contribuicao/contribuicao.html">
+                        <span class="textoContribuicao">Contribuição</span>
+                        <div class="botaoContribuicaoParteBranca">
+                            <div class="iconContribuicao">
+                                <img src="../../assets/img/global/icon-contribuicao.svg" alt="" aria-hidden="true" />
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
-
     <section class="hero-sobre">
       <div class="container hero-content">
         <h1>Revelando Nossa<br>Identidade, Visão e Valores</h1>
@@ -382,5 +422,53 @@
 
     </div>
   </section>
+  <footer aria-label="Rodapé com informações de navegação">
+        <div class="containerFooter">
+            <div class="contentFooter">
+                <div class="logoFooter">
+                    <div class="imageFooter">
+                        <img src="../../assets/img/global/logo-principal.svg" alt="Logo Plantaê" loading="lazy" />
+                    </div>
+                </div>
+                <div class="menuFooter">
+                    <ul class="menuFooterContent">
+                        <li class="menuFooterContentTitle">Explorar</li>
+                        <li><a href="../contribuicao/contribuicao.html">Contribuição</a></li>
+                        <li><a href="../guia verde-principal/guiaVerde.html">Guia Verde</a></li>
+                        <li><a href="../guia verde-principal/guiaVerde.html">Mapa</a></li>
+                        <li><a href="../painel/painel.html">Painel</a></li>
+                    </ul>
+                    <ul class="menuFooterContent">
+                        <li class="menuFooterContentTitle">Projeto</li>
+                        <li><a href="../sobre/sobre.html">Sobre</a></li>
+                        <li><a href="../sobre/sobre.html">Equipe</a></li>
+                    </ul>
+                    <ul class="menuFooterContentSocial">
+                        <li class="menuFooterContentTitleSocial">Redes</li>
+                        <div class="containerIconsFlex">
+                            <a href="https://github.com/plantaae" target="_blank" class="containerIconFooter">
+                                <div class="containerIcon">
+                                    <img src="../../assets/img/global/icon-github.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="" class="containerIconFooter">
+                                <div class="containerIcon">
+                                    <img src="../../assets/img/global/icon-instagram.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="" class="containerIconFooter">
+                                <div class="containerIcon">
+                                    <img src="../../assets/img/global/icon-linkedin.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="details">
+                <p>Plantaê © 2025. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

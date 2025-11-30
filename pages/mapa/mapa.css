@@ -67,7 +67,7 @@ a {
   height: 35px;
   border-radius: 40px;
   background: #2c473e;
-  background: linear-gradient(90deg,rgba(44, 71, 62, 1) 0%,rgba(107, 129, 58, 1) 100%);
+  background: linear-gradient(90deg, rgba(44, 71, 62, 1) 0%, rgba(107, 129, 58, 1) 100%);
 }
 
 .textoContribuicao {
@@ -107,37 +107,71 @@ a {
 }
 
 @media (max-width: 990px) {
-
-body {
-  overflow-x: hidden;
-}
-
-.mobileMenu {
-  display: block;
-  background: transparent;
-  border: none;
-}
-
-.menu {
-  flex-direction: column;
-  gap: 48px;
-  position: absolute;
-  top: 15dvh;
-  right: 0;
-  width: 295px;
-  height: 85dvh;
-  background: #1c2c27;
-  transform: translateX(100%);
-  transition: transform 0.4s ease;
-}
   
-.menu.active {
-  transform: translateX(0);
+  body {
+    overflow-x: hidden;
+  }
+  
+  .mobileMenu {
+    display: block;
+    background: transparent;
+    border: none;
+  }
+  
+  .menu {
+    flex-direction: column;
+    gap: 48px;
+    position: absolute;
+    top: 15dvh;
+    right: 0;
+    width: 295px;
+    height: 85dvh;
+    background: #1c2c27;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .home {
+    margin-top: 24px;
+  }
 }
 
-.home {
-  margin-top: 24px;
-}
+@media (max-width: 990px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .mobileMenu {
+    display: block;
+    background: transparent;
+    border: none;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 48px;
+    position: absolute;
+    top: 15dvh;
+    right: 0;
+    width: 295px;
+    height: 85dvh;
+    background: #1c2c27;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .linkHome {
+    margin-top: 24px;
+  }
 }
 
 .container-caixaTopo {
@@ -208,7 +242,7 @@ body {
 
 .pesquisaPrincipal input:hover {
   border-color: #2C473E;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .local-btn {
@@ -234,12 +268,12 @@ body {
 }
 
 .pesquisaPrincipal button:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
 .pesquisaPrincipal button:focus {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
@@ -267,7 +301,7 @@ body {
 
 .btn-filtros button:hover {
   background-color: #B0D182;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
@@ -282,7 +316,7 @@ body {
   height: 260px;
   padding: 10px;
   border-radius: 14px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   font-family: Arial, sans-serif;
   line-height: 24px;
 }
@@ -334,7 +368,7 @@ body {
   border-radius: 16px;
   align-items: center;
   margin-top: 28px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navegacao p {
@@ -363,7 +397,7 @@ body {
 
 .navegacao button:hover {
   background-color: #B0D182;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
@@ -382,7 +416,7 @@ body {
   height: 70px;
   display: flex;
   flex-direction: column;
-  align-content:first baseline;
+  align-content: first baseline;
   justify-self: center;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -396,7 +430,7 @@ body {
 .info:hover {
   transform: translateY(-8px) scale(1.03);
   background-color: rgba(176, 209, 130, 0.5);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .info img {
@@ -480,40 +514,43 @@ body {
 
 .sidebar-item .muted {
   font-size: 12px;
-  color: rgba(44,71,62,0.6);
+  color: rgba(44, 71, 62, 0.6);
   margin-top: 12px;
 }
 
 .sidebar-item:hover {
   transform: translateY(-4px);
-  background: linear-gradient(90deg, rgba(176,209,130,0.14), rgba(106,142,78,0.06));
-  box-shadow: 0 6px 14px rgba(44,71,62,0.08);
+  background: linear-gradient(90deg, rgba(176, 209, 130, 0.14), rgba(106, 142, 78, 0.06));
+  box-shadow: 0 6px 14px rgba(44, 71, 62, 0.08);
 }
 
 .sidebar-item:focus {
-  outline: 2px solid rgba(42,82,70,0.18);
+  outline: 2px solid rgba(42, 82, 70, 0.18);
   outline-offset: 2px;
 }
 
 .sidebar::-webkit-scrollbar {
   width: 8px;
 }
+
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .sidebar::-webkit-scrollbar-thumb {
-  background: rgba(44,71,62,0.12);
+  background: rgba(44, 71, 62, 0.12);
   border-radius: 8px;
 }
+
 .sidebar::-webkit-scrollbar-thumb:hover {
-  background: rgba(44,71,62,0.18);
+  background: rgba(44, 71, 62, 0.18);
 }
 
 #map {
   width: 937px;
   height: 502px;
   justify-self: right;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .area-mapa {
@@ -562,7 +599,7 @@ footer {
 }
 
 .menuFooterContent .menuFooterContentTitle {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -615,287 +652,294 @@ footer {
 }
 
 @media (max-width: 769px) {
-.contentFooter, .menuFooter {
-flex-direction: column;
-}
+
+  .contentFooter,
+  .menuFooter {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 428px) {
-.container-caixaTopo p {
-  width: 95%;
-  font-size: 16px;
-}
+  .container-caixaTopo p {
+    width: 95%;
+    font-size: 16px;
+  }
 
-.local-btn {
-  width: 100%;
-  font-size: 10px;
-  font-weight: 600;
-}
+  .local-btn {
+    width: 100%;
+    font-size: 10px;
+    font-weight: 600;
+  }
 
-.local-btn img {
-  display: none;
-}
+  .local-btn img {
+    display: none;
+  }
 
-.btn-filtros {
-  display: none;
-}
+  .btn-filtros {
+    display: none;
+  }
 
-#map {
-  width: 100%;
-  justify-self: right;
-}
+  #map {
+    width: 100%;
+    justify-self: right;
+  }
 
-.area-mapa {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column-reverse;
-}
+  .area-mapa {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column-reverse;
+  }
 
-.legenda {
-  display: none;
-}
+  .legenda {
+    display: none;
+  }
 
-.sidebar {
-  width: 100%;
-  height: 200px;
-}
+  .sidebar {
+    width: 100%;
+    height: 200px;
+  }
 
-.navegacao p {
-  display: none;
-}
+  .navegacao p {
+    display: none;
+  }
 
-.navegacao button {
-  font-size: 11px;
-  font-weight: 500;
-  width: auto;
-}
+  .navegacao button {
+    font-size: 11px;
+    font-weight: 500;
+    width: auto;
+  }
 
-.navegacao img {
-  width: 12px;
-  height: 12px;
-}
+  .navegacao img {
+    width: 12px;
+    height: 12px;
+  }
 
-.info img, .info h5, .info p {
-  display: block;
-}
+  .info img,
+  .info h5,
+  .info p {
+    display: block;
+  }
 
-.info {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  .info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-.info h5 {
-  font-size: 16px;
-  font-weight: 400;
-}
+  .info h5 {
+    font-size: 16px;
+    font-weight: 400;
+  }
 
-.info p {
-  font-size: 12px;
-  font-weight: 400;
-}
+  .info p {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 390px) {
 
-.local-btn {
-  width: 100%;
-  font-size: 9px;
-  font-weight: 500;
-}
+  .local-btn {
+    width: 100%;
+    font-size: 9px;
+    font-weight: 500;
+  }
 }
 
 @media (max-width: 375px) {
 
-.local-btn {
-  width: 100%;
-  font-size: 8px;
-  font-weight: 500;
-}
+  .local-btn {
+    width: 100%;
+    font-size: 8px;
+    font-weight: 500;
+  }
 
-#map {
-  width: 100%;
-  height: 300px;
-  justify-self: right;
-}
+  #map {
+    width: 100%;
+    height: 300px;
+    justify-self: right;
+  }
 }
 
 @media (max-width: 360px) {
 
-.local-btn {
-  width: 60%;
-  font-size: 12px;
-  font-weight: 400;
+  .local-btn {
+    width: 60%;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .local-btn img {
+    display: initial;
+    height: 16px;
+    width: 16px;
+    padding-right: 8px;
+  }
+
+  .pesquisaPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pesquisar {
+    width: 90%;
+    height: 25px;
+  }
+
+  #map {
+    width: 100%;
+    height: 300px;
+    justify-self: right;
+  }
+
+  .navegacao button {
+    font-size: 9px;
+    font-weight: 500;
+    width: auto;
+    height: auto;
+  }
 }
 
-.local-btn img {
-  display: initial;
-  height: 16px;
-  width: 16px;
-  padding-right: 8px;
-}
-
-.pesquisaPrincipal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pesquisar {
-  width: 90%;
-  height: 25px;
-}
-
-#map {
-  width: 100%;
-  height: 300px;
-  justify-self: right;
-}
-
-.navegacao button {
-  font-size: 9px;
-  font-weight: 500;
-  width: auto;
-  height: auto;
-}
-}
 @media (max-width: 320px) {
 
-.local-btn {
-  width: 60%;
-  font-size: 12px;
-  font-weight: 400;
-}
+  .local-btn {
+    width: 60%;
+    font-size: 12px;
+    font-weight: 400;
+  }
 
-.local-btn img {
-  display: initial;
-  height: 16px;
-  width: 16px;
-  padding-right: 8px;
-}
+  .local-btn img {
+    display: initial;
+    height: 16px;
+    width: 16px;
+    padding-right: 8px;
+  }
 
-.pesquisaPrincipal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .pesquisaPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.pesquisar {
-  width: 90%;
-  height: 25px;
-}
+  .pesquisar {
+    width: 90%;
+    height: 25px;
+  }
 
-.navegacao button {
-  font-size: 8px;
-  font-weight: 500;
-  width: auto;
-  height: auto;
-}
+  .navegacao button {
+    font-size: 8px;
+    font-weight: 500;
+    width: auto;
+    height: auto;
+  }
 
-.navegacao img {
-  width: 12px;
-  height: 12px;
-}
+  .navegacao img {
+    width: 12px;
+    height: 12px;
+  }
 
-#map {
-  width: 100%;
-  height: 200px;
-  justify-self: right;
-}
+  #map {
+    width: 100%;
+    height: 200px;
+    justify-self: right;
+  }
 }
 
 @media (max-width: 162px) {
-#map {
-  width: 100%;
-  height: 100px;
-}
+  #map {
+    width: 100%;
+    height: 100px;
+  }
 
-.local-btn {
-  width: 80%;
-  font-size: 11px;
-}
+  .local-btn {
+    width: 80%;
+    font-size: 11px;
+  }
 
-.local-btn img {
-  display: none;
-}
+  .local-btn img {
+    display: none;
+  }
 
-.pesquisaPrincipal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .pesquisaPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.pesquisar {
-  width: 90%;
-  height: 25px;
-  font-size: 10px;
-}
+  .pesquisar {
+    width: 90%;
+    height: 25px;
+    font-size: 10px;
+  }
 
-.pesquisar img {
-  width: 10px;
-  height: 10px;
-}
+  .pesquisar img {
+    width: 10px;
+    height: 10px;
+  }
 
-.navegacao {
-  display: none;
-}
+  .navegacao {
+    display: none;
+  }
 }
 
 @media (max-width: 770px) {
-.local-btn {
-  font-size: 11px;
-}
+  .local-btn {
+    font-size: 11px;
+  }
 
-.navegacao p {
-  display: none;
-}
+  .navegacao p {
+    display: none;
+  }
 
-.navegacao button {
-  font-size: 11px;
-  font-weight: 500;
-  width: auto;
-}
+  .navegacao button {
+    font-size: 11px;
+    font-weight: 500;
+    width: auto;
+  }
 
-.navegacao img {
-  width: 12px;
-  height: 12px;
-}
+  .navegacao img {
+    width: 12px;
+    height: 12px;
+  }
 
-.info img, .info h5, .info p {
-  display: block;
-}
+  .info img,
+  .info h5,
+  .info p {
+    display: block;
+  }
 
-.info {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  .info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-.info h5 {
-  font-size: 16px;
-  font-weight: 400;
-}
+  .info h5 {
+    font-size: 16px;
+    font-weight: 400;
+  }
 
-.info p {
-  font-size: 12px;
-  font-weight: 400;
-}
+  .info p {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 654px) {
-.local-btn img {
-  display: none;
-}
+  .local-btn img {
+    display: none;
+  }
 }
