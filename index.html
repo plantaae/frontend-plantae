@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js-global/navbar.js" defer></script>
+    <script src="navbar.js" defer></script>
     <title>Plantaê</title>
 </head>
 <body>
   <header>
     <nav class="containerNavbar">
       <div class="containerImgNavbar">
-        <img src="assets/img/global/logo-negativa.svg" alt="logo Plantaê" />
+        <img src="img/logo-icon 1.png" alt="logo Plantaê" />
       </div>
       <button id="mobileMenu" class="mobileMenu" aria-controls="menu" aria-expanded="false"
         aria-label="Abrir menu de navegação">
@@ -21,26 +21,26 @@
       </button>
       <ul id="menu" class="menu">
         <li class="home">
-          <a href="#home">Home</a>
+          <a href="/">Home</a>
         </li>
         <li class="guiaVerde">
-          <a href="pages/guia verde-principal/guiaVerde.html">Guia Verde</a>
+          <a href="/">Guia Verde</a>
         </li>
         <li class="mapa">
-          <a href="pages/mapa/mapa.html">Mapa</a>
+          <a href="/">Mapa</a>
         </li>
         <li class="painel">
-          <a href="pages/painel/painel.html">Painel</a>
+          <a href="/">Painel</a>
         </li>
         <li class="sobre">
-          <a href="pages/sobre/sobre.html">Sobre</a>
+          <a href="/">Sobre</a>
         </li>
         <li class="contribuicao">
-          <a class="botaoContribuicao" href="pages/contribuicao/contribuicao.html">
+          <a class="botaoContribuicao" href="/">
             <span class="textoContribuicao">Contribuição</span>
             <div class="botaoContribuicaoParteBranca">
               <div class="iconContribuicao">
-                <img src="assets/img/global/icon-contribuicao.svg" alt="" aria-hidden="true" />
+                <img src="img/Vector.svg" alt="" aria-hidden="true" />
               </div>
             </div>
           </a>
@@ -50,25 +50,24 @@
   </header>
 
     <section class="sectionUm">
-    <div class="imagemPlantae">
-        <img src="assets/img/home/hero-1024w.webp" alt="imagemUM">
-    </div>
-
     <div class="texto">
-        <h2>Floresça com o Plantaê</h2>
+        <h2>FLORESÇA COM O <span class="detalheh2">PLANTAÊ</span></h2>
         <br><br>
-        <p class="pargrafoUm">Transforme hábitos em impacto real. Um desafio por vez, <br>
-        uma raiz mais forte no planeta.</p>
+        <p class="pargrafoUm">Transforme hábitos em impacto real. Um desafio por vez,<br>uma raiz mais forte no planeta.</p>
 
-      <a href="pages/guia verde-principal/guiaVerde.html" class="containerVerde">
+        <a href="./pages/guia verde-principal/guiaVerde.html">
+      <div class="containerVerde">
         <div class="containericone">
             <div class="containericoneVerde">
                 <img src="assets/img/home/icon-arvore-green.svg" alt="">
             </div>
         </div>
+        
         <p>Começar pela Árvore Virtual</p>
+      </div>
       </a>
     </div>
+    </section>
 
     <div class="info-cards">
         <div class="card">
@@ -84,24 +83,24 @@
             <p>Free, Estudantil e Institucional</p>
         </div>
     </div>
-    </section>
+
 
 
 <section class="textoVerde">
-    <div class="textov">
-    <h3>Comece sua Jornada verde</h3>
+    <h3>Comece Sua Jornada Verde</h3>
     <p>Escolha um dos caminhos para começar agora no Plantaê.</p>
-    </div>
 </section>
 
 <section class="arvore">
 <div class="texto2">
-  <h6>GAMIFICAÇÃo</h6>
+  <h6>GAMIFICAÇÃO</h6>
   <h3>Plante Sua Árvore Virtual</h3>
+  <hr>
 <p>Cada ação é uma semente de esperança.</p>
-<ul>
-    <li><a href="#"></a>Plantar agora</li>
-</ul>
+<a href="./pages/guia verde-principal/guiaVerde.html" class="btn1">
+  <div class="iconPlantar"></div>
+  <span>Plantar agora</span>
+</a>
 </div>
 <div class="imgemArvore">
      <img src="assets/img/home/cta-arvore-virtual-800w.webp" alt="Árvore-virtual">
@@ -116,12 +115,13 @@
     <div class="textoMapa">
         <h6>MAPA</h6>
         <h3>Mapa Verde</h3>
-        <p>Descubra ecopontos, parceiro e ações sustentáveis <br> próximos a você.</p>
-        <ul>
-            <li><a href="#">Explorar mapa</a></li>
-        </ul>
+        <hr>
+        <p>Descubra ecopontos, parceiro e ações sustentáveis próximos a você.</p>
+        <a href="./pages/mapa/mapa.html" class="btn2">
+          <div class="iconExplorar"></div>
+          <span>Explorar mapa</span>
+        </a>
     </div>
-
 </section>
 
 
@@ -129,10 +129,12 @@
     <div class="quizTexto">
         <h6>QUIZ</h6>
         <h3>Descubra seu nível verde</h3>
-        <p>Teste seus hábitos e veja o quanto  suas ações ajudam <br> o planeta. Aprenda novas formas de cuidar da <br> natureza bricando!</p>
-        <ul>
-            <li><a href="#"></a>Fazer o quiz</li>
-        </ul>
+        <hr>
+        <p>Teste seus hábitos e veja o quanto  suas ações ajudam o planeta. Aprenda novas formas de cuidar da natureza bricando!</p>
+        <a href="./pages/guia-verde-quiz/quiz-1/quiz1.html" class="btn3">
+          <div class="iconQuiz"></div>
+          <span>Fazer o quiz</span>
+        </a>
     </div>
     <div class="imagemquiz">
         <img src="assets/img/home/cta-quiz-verde-800w.webp" alt="imagem do quiz">
@@ -146,7 +148,10 @@
       <div class="ctaTexto">
         <h3>Impacto ambiental no Brasil e no mundo</h3>
         <p>Acompanhe dados, gráficos e metas para entender como suas ações se conectam ao planeta.</p>
-        <a href="#">Ver Painel</a>
+        <a href="./pages/painel/painel.html" class="btn4">
+          <div class="iconPainel"></div>
+          <span>Ver Painel</span>
+        </a>
       </div>
     </section>
 
@@ -156,8 +161,8 @@
           <div class="logoFooter">
             <div class="imageFooter">
               <img
-                src="assets/img/global/logo-negativa.svg"
-                alt="Logo Plantaê"
+                src="img/logo-icon 1.png"
+                alt="Logo Saphire"
                 loading="lazy"
               />
             </div>
@@ -180,17 +185,17 @@
               <div class="containerIconsFlex">
                   <a href="" class="containerIconFooter">
                       <div class="containerIcon">
-                        <img src="assets/img/global/icon-github.svg" alt="">
+                        <img src="img/mdi_github.png" alt="">
                       </div>
                   </a>
                   <a href="" class="containerIconFooter">
                       <div class="containerIcon">
-                        <img src="assets/img/global/icon-instagram.svg" alt="">
+                        <img src="img/instagram.png" alt="">
                       </div>
                   </a>
                   <a href="" class="containerIconFooter">
                       <div class="containerIcon">
-                        <img src="assets/img/global/icon-linkedin.svg" alt="">
+                        <img src="img/linkedin.png" alt="">
                       </div>
                   </a>
               </div>
@@ -202,5 +207,6 @@
         </div>
       </div>
     </footer>
+    
 </body>
 </html>
