@@ -215,7 +215,7 @@ transform: translateY(-3px);
 }
 
 .containerImgHome {
-  margin-top: 48px;
+  margin: 48px 0;
 }
 
 .containerImgHome img {

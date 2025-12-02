@@ -34,7 +34,7 @@ header {
 }
 
 .containerImgNavbar img {
-  width: 100%;
+  width: 50%;
 }
 
 .menu {
@@ -49,10 +49,30 @@ header {
   list-style: none;
 }
 
-a {
+.menu li a,
+.menuFooterContent li a {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: #fff;
+  transition: all 0.4s ease;
+}
+
+.menu li a:hover,
+.menuFooterContent li a:hover {
+  color: #c2c2c2;
+}
+
+.containerBotaoInstituicoes {
+  transition: all 0.4s ease;
+}
+
+.containerBotaoInstituicoes a {
+  transition: none;
+}
+
+a:hover,
+.containerBotaoInstituicoes:hover {
+  transform: translateY(-3px);
 }
 
 .contribuicao {
@@ -67,7 +87,9 @@ a {
   height: 35px;
   border-radius: 40px;
   background: #2c473e;
-  background: linear-gradient(90deg, rgba(44, 71, 62, 1) 0%, rgba(107, 129, 58, 1) 100%);
+  background: linear-gradient(90deg,
+      rgba(44, 71, 62, 1) 0%,
+      rgba(107, 129, 58, 1) 100%);
 }
 
 .textoContribuicao {
@@ -90,54 +112,26 @@ a {
 .iconContribuicao {
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  padding-top: 8px;
 }
+
+.iconContribuicao {
+  height: 100%;
+}
+
 
 .mobileMenu {
   display: none;
   cursor: pointer;
 }
 
-.mobileMenu div {
+.line {
   width: 32px;
   height: 4px;
   background: #fff;
   margin: 8px;
   border-radius: 24px;
-}
-
-@media (max-width: 990px) {
-  
-  body {
-    overflow-x: hidden;
-  }
-  
-  .mobileMenu {
-    display: block;
-    background: transparent;
-    border: none;
-  }
-  
-  .menu {
-    flex-direction: column;
-    gap: 48px;
-    position: absolute;
-    top: 15dvh;
-    right: 0;
-    width: 295px;
-    height: 85dvh;
-    background: #1c2c27;
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
-  }
-
-  .menu.active {
-    transform: translateX(0);
-  }
-
-  .home {
-    margin-top: 24px;
-  }
 }
 
 @media (max-width: 990px) {
@@ -653,10 +647,10 @@ footer {
 
 @media (max-width: 769px) {
 
-  .contentFooter,
-  .menuFooter {
-    flex-direction: column;
-  }
+    .contentFooter,
+    .menuFooter {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 428px) {
