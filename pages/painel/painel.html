@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="painel.css">
     <script src="../../js-global/navbar.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
     <title>Painel</title>
 </head>
+
 <body>
     <header>
         <nav class="containerNavbar">
@@ -143,6 +146,16 @@
                 </div>
             </section>
         </div>
+        <div class="graficos">
+            <div class="containerGraficos">
+                <div class="containerChartLixoes">
+                    <canvas id="chartLixoes"></canvas>
+                </div>
+                <div class="containerChartColetaSeletiva">
+                    <canvas id="chartColetaSeletiva"></canvas>
+                </div>
+            </div>
+        </div>
         <div class="resultadoPlantae">
             <section class="containerResultadoPlantae">
                 <h2 class="tituloResultadoPlantae">Seus resultados no Plantaê</h2>
@@ -218,7 +231,8 @@
                         <p>Continue sua jornada</p>
                     </div>
                     <h3 class="tituloTransformeDados">Transforme dados em ação</h3>
-                    <p class="textoTransformeDados">Use o Plantaê para acompanhar seus hábitos, aprender com os conteúdos e apoiar iniciativas que cuidam do planeta.</p>
+                    <p class="textoTransformeDados">Use o Plantaê para acompanhar seus hábitos, aprender com os
+                        conteúdos e apoiar iniciativas que cuidam do planeta.</p>
                 </div>
                 <a class="botaoTransformeDados">Explorar tutoriais e desafios →</a>
             </div>
@@ -259,7 +273,8 @@
                                     <img src="../../assets/img/global/icon-instagram.svg" alt="Logo Instagram">
                                 </div>
                             </a>
-                            <a href="http://linkedin.com/company/projetooplantae" target="_blank" class="containerIconFooter">
+                            <a href="http://linkedin.com/company/projetooplantae" target="_blank"
+                                class="containerIconFooter">
                                 <div class="containerIcon">
                                     <img src="../../assets/img/global/icon-linkedin.svg" alt="Logo LinkedIn">
                                 </div>
@@ -273,5 +288,99 @@
             </div>
         </div>
     </footer>
+    <script>
+        let chartLixoes = document.getElementById("chartLixoes");
+        let chartGraphLixoes = new Chart(chartLixoes, {
+            type: 'line',
+            data: {
+                labels: ["2010", "2015", "2020", "2024"],
+                datasets: [{
+                    data: [3000, 2800, 2600, 2000],
+                    borderWidth: 4,
+                    borderColor: '#2c473e',
+                    backgroundColor: '#2c473e',
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 5000,
+                        ticks: {
+                            stepSize: 1000
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        color: '#2c473e',
+                        font: {
+                            family: 'Poppins',
+                            size: 20
+                        },
+                        text: "Número de municípios com lixões ativos",
+                    },
+                    subtitle: {
+                        display: true,
+                        font: {
+                            family: 'Roboto',
+                        },
+                        text: 'No Brasil existe aproximadamente 5.000 muncipios',
+                        padding: {
+                            top: 12,
+                            bottom: 24
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
+
+            }
+        });
+
+        let chartColetaSeletiva = document.getElementById("chartColetaSeletiva");
+        let chartGraphColetaSeletiva = new Chart(chartColetaSeletiva, {
+            type: 'pie',
+            data: {
+                labels: ["Com coleta seletiva - 60%", "Sem coleta seletiva - 40%"],
+                datasets: [{
+                    data: [60, 40],
+                    backgroundColor: [
+                        '#2C473E',
+                        '#6A8E4E',
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        color: '#2c473e',
+                        font: {
+                            family: 'Poppins',
+                            size: 20
+                        },
+                        text: "Coleta seletiva municipal",
+                    },
+                    subtitle: {
+                        display: true,
+                        font: {
+                            family: 'Roboto',
+                        },
+                        text: 'Porcentagem de municípios com e sem coleta seletiva.',
+                        padding: {
+                            top: 12,
+                            bottom: 12
+                        }
+                    },
+                }
+
+            }
+        });
+    </script>
 </body>
-</html>
+
+</html>>
