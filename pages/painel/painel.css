@@ -254,6 +254,7 @@ main {
 /* Adicione no seu painel.css */
 .containerGraficos {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     position: relative;
     max-width: 1200px;
@@ -261,7 +262,7 @@ main {
 }
 
 .containerChartLixoes,
-.containerChartColetaSeletiva {
+.containerChartColetaSeletiva, .containerChartReciclagem, .containerChartEfeitoEstufa {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,6 +273,10 @@ main {
     border-radius: 16px;
     background: #fff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+}
+
+#chartLixoes {
+    height: 100%;
 }
 
 .tituloResultadoPlantae {
@@ -479,6 +484,12 @@ footer {
     color: #fff;
 }
 
+@media (max-width: 600px) {
+    .containerChartLixoes, .containerChartReciclagem {
+        display: none;
+    }
+}
+
 @media (max-width: 990px) {
     body {
         overflow-x: hidden;
@@ -549,7 +560,7 @@ footer {
         font-size: 24px;
     }
 
-    .textoTransformeDados {
+    .textoTransformeDados, .botaoTransformeDados {
         font-size: 14px;
     }
 }

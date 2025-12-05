@@ -154,6 +154,12 @@
                 <div class="containerChartColetaSeletiva">
                     <canvas id="chartColetaSeletiva"></canvas>
                 </div>
+                <div class="containerChartReciclagem">
+                    <canvas id="chartReciclagem"></canvas>
+                </div>
+                <div class="containerChartEfeitoEstufa">
+                    <canvas id="chartEfeitoEstufa"></canvas>
+                </div>
             </div>
         </div>
         <div class="resultadoPlantae">
@@ -234,7 +240,7 @@
                     <p class="textoTransformeDados">Use o Plantaê para acompanhar seus hábitos, aprender com os
                         conteúdos e apoiar iniciativas que cuidam do planeta.</p>
                 </div>
-                <a class="botaoTransformeDados">Explorar tutoriais e desafios →</a>
+                <a class="botaoTransformeDados">Explorar tutoriais e desafios  →</a>
             </div>
         </div>
     </main>
@@ -378,6 +384,108 @@
                     },
                 }
 
+            }
+        });
+
+        let chartReciclagem = document.getElementById("chartReciclagem");
+        let chartGraphReciclagem = new Chart(chartReciclagem, {
+            type: 'line',
+            data: {
+                labels: ["2010", "2015", "2020", "2022"],
+                datasets: [{
+                    data: [2.5, 3.0, 4.0, 4.0],
+                    borderWidth: 4,
+                    borderColor: '#2c473e',
+                    backgroundColor: '#2c473e',
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 10,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        color: '#2c473e',
+                        font: {
+                            family: 'Poppins',
+                            size: 20
+                        },
+                        text: "Taxa de Reciclagem no Brasil",
+                    },
+                    subtitle: {
+                        display: true,
+                        font: {
+                            family: 'Roboto',
+                        },
+                        text: 'A mais de 10 anos é menos de 10%',
+                        padding: {
+                            top: 12,
+                            bottom: 24
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
+
+            }
+        });
+
+        let chartEfeitoEstufa = document.getElementById("chartEfeitoEstufa");
+        let chartGraphEfeitoEstufa = new Chart(chartEfeitoEstufa, {
+            type: 'bar',
+            data: {
+                labels: ['2010', '2015', '2020', '2022'],
+                datasets: [{
+                    label: 'Evolução anual das emissões de CO₂',
+                    data: [1.9, 2.1, 2.2, 2.4],
+                    backgroundColor: '#2c473e'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 4,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                },
+                 plugins: {
+                    title: {
+                        display: true,
+                        color: '#2c473e',
+                        font: {
+                            family: 'Poppins',
+                            size: 20
+                        },
+                        text: "Emissões de CO₂ no Brasil",
+                    },
+                    subtitle: {
+                        display: true,
+                        font: {
+                            family: 'Roboto',
+                        },
+                        text: 'Em bilhões',
+                        padding: {
+                            top: 12,
+                            bottom: 12
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
