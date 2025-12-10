@@ -14,128 +14,223 @@ const imagensArvore = [
   "../../assets/img/guia-verde/arvore-nivel-4.svg",
   "../../assets/img/guia-verde/arvore-nivel-5.svg"
 ];
-
-// ========================================
-// 2. Pegando os elementos do HTML
-// ========================================
-
-// Lista de checkboxes das tarefas
-const tarefas = document.querySelectorAll(".tarefa");
-
-// Barra de progresso
+// ===== Seletores do HTML  =====
+const tarefas = document.querySelectorAll(".tarefa"); // checkboxes
 const barra = document.getElementById("barra");
-
-// Textos que mostram o nível, folhas e próximo nível
 const textoNivel = document.getElementById("textoNivel");
 const textoFolhas = document.getElementById("textoFolhas");
 const textoProx = document.getElementById("textoProx");
-
-// Imagem da árvore que vai mudando
 const imgArvore = document.getElementById("imgArvore");
-
-// Botões de reiniciar e resetar
 const btnReiniciar = document.getElementById("btnReiniciar");
 const resetarTexto = document.getElementById("resetar");
-
-// Label que mostra a meta do próximo nível
 const metaLabel = document.getElementById("metaLabel");
+const conquistas = document.querySelectorAll(".conquista-item");
 
-// ========================================
-// 3. Variáveis para controlar folhas e nível
-// ========================================
-let folhas = 0; // quantidade de folhas que o usuário tem
-let nivel = 0;   // nível atual da árvore
+// ===== Estado inicial (carrega do localStorage quando existir) =====
+let folhas = Number(localStorage.getItem("folhas")) || 0;
+let nivel = Number(localStorage.getItem("nivel")) || 0;
 
-// ========================================
-// 4. Função para atualizar a interface
-// ========================================
+// Se não houver valor de contabilizada salvo, iniciamos com "false"
+tarefas.forEach((t, i) => {
+  // Se o elemento não tiver id, cria um id para salvar
+  if (!t.id) t.id = "tarefa-" + i;
+});
+
+// ===== Função para restaurar estado das missões (checked + contabilizada) =====
+function restaurarMissoes() {
+  tarefas.forEach((t, i) => {
+    const keyChecked = `tarefa_checked_${t.id}`;
+    const keyCont = `tarefa_cont_${t.id}`;
+
+    const savedChecked = localStorage.getItem(keyChecked);
+    const savedCont = localStorage.getItem(keyCont);
+
+    t.checked = savedChecked === "true";
+    // Se não existir valor salvo, assume "false"
+    t.dataset.contabilizada = savedCont === "true" ? "true" : "false";
+  });
+}
+
+// ===== lucas usei aqui para conquistas salvas =====
+function restaurarConquistas() {
+  conquistas.forEach((c, i) => {
+    const key = `conquista_${i}`;
+    if (localStorage.getItem(key) === "true") {
+      c.classList.add("desbloqueada");
+    } else {
+      c.classList.remove("desbloqueada");
+    }
+  });
+}
+
+// ===== Salvar todas chaves relevantes =====
+function salvarTudo() {
+  localStorage.setItem("folhas", String(folhas));
+  localStorage.setItem("nivel", String(nivel));
+
+  // salvar cada checkbox e seu estado contabilizada
+  tarefas.forEach(t => {
+    const keyChecked = `tarefa_checked_${t.id}`;
+    const keyCont = `tarefa_cont_${t.id}`;
+    localStorage.setItem(keyChecked, String(t.checked));
+    localStorage.setItem(keyCont, String(t.dataset.contabilizada || "false"));
+  });
+
+  // salvar conquistas
+  conquistas.forEach((c, i) => {
+    localStorage.setItem(`conquista_${i}`, c.classList.contains("desbloqueada") ? "true" : "false");
+  });
+}
+
+// ===== Atualizar conquistas (comportamento: quando folhas >= meta, marca desbloqueada) =====
+function atualizarConquistas() {
+  conquistas.forEach((c, i) => {
+    const meta = Number(c.dataset.meta) || 0;
+    if (folhas >= meta) {
+      c.classList.add("desbloqueada");
+    }
+  });
+
+  // ===== usando para salvar para futurando usar em outro local
+  conquistas.forEach((c, i) => {
+    localStorage.setItem(`conquista_${i}`, c.classList.contains("desbloqueada") ? "true" : "false");
+  });
+}
+
+// ===== Atualizar UI =====
 function atualizarUI() {
-  // Meta do próximo nível
-  let metaProximo = metas[nivel + 1] || metas[metas.length - 1];
-
-  // Calculando porcentagem de progresso
-  let progresso = ((folhas - metas[nivel]) / (metaProximo - metas[nivel])) * 100;
+  
+  const metaAtual = metas[nivel];
+  const metaProx = metas[nivel + 1] !== undefined ? metas[nivel + 1] : metas[metas.length - 1];
+  let progresso = ((folhas - metaAtual) / (metaProx - metaAtual)) * 100;
+  if (!isFinite(progresso)) progresso = 0;
   if (progresso < 0) progresso = 0;
   if (progresso > 100) progresso = 100;
 
-  // Atualiza barra de progresso
   barra.style.width = Math.round(progresso) + "%";
   barra.innerText = Math.round(progresso) + "%";
 
-  // Atualiza textos
   textoNivel.innerText = `Nível ${nivel} — ${Math.round(progresso)}%`;
   textoFolhas.innerText = `🌱 ${folhas} folhas`;
-  textoProx.innerText = (nivel < metas.length - 1) 
-      ? `Próximo nível em ${metas[nivel + 1] - folhas} folhas`
-      : "Você chegou ao nível máximo! 🌳✨";
 
-  metaLabel.innerText = (nivel < metas.length - 1) 
-      ? `${metas[nivel + 1]} folhas`
-      : `${metas[metas.length - 1]} folhas`;
+  textoProx.innerText = (nivel < metas.length - 1)
+    ? `Próximo nível em ${Math.max(0, metas[nivel + 1] - folhas)} folhas`
+    : "Você chegou ao nível máximo! 🌳✨";
 
-  // Muda a imagem da árvore de acordo com o nível
-  imgArvore.src = imagensArvore[nivel];
+  metaLabel.innerText = (nivel < metas.length - 1)
+    ? `${metas[nivel + 1]} folhas`
+    : `${metas[metas.length - 1]} folhas`;
+
+  // Atualiza imagem da árvore 
+  const idxImg = Math.min(Math.max(0, nivel), imagensArvore.length - 1);
+  if (imgArvore) imgArvore.src = imagensArvore[idxImg];
+
+  atualizarConquistas();
+  salvarTudo();
 }
 
-// ========================================
-// 5. Função para marcar tarefas
-// ========================================
-function marcarTarefas() {
-  // Soma os valores das tarefas marcadas
-  let soma = 0;
-  tarefas.forEach(t => { if (t.checked) soma += Number(t.value); });
-
-  let total = folhas + soma;
-
-  // Verifica se passou de nível
-  if (nivel < metas.length - 1 && total >= metas[nivel + 1]) {
-    folhas = total;           // guarda as folhas
-    nivel++;                  // sobe de nível
-    tarefas.forEach(t => t.checked = false); // desmarca todas
+// ===== Função que verifica se subiu de nível e limpa checkboxes se subir =====
+function verificarSubidaNivel() {
+  let subiu = false;
+  while (nivel < metas.length - 1 && folhas >= metas[nivel + 1]) {
+    nivel++;
+    subiu = true;
   }
 
-  // Calcula o progresso de novo
-  let metaProximo = metas[nivel + 1] || metas[metas.length - 1];
-  let progresso = ((total - metas[nivel]) / (metaProximo - metas[nivel])) * 100;
-  if (progresso < 0) progresso = 0;
-  if (progresso > 100) progresso = 100;
+  if (subiu) {
 
-  // Atualiza barra e textos
-  barra.style.width = Math.round(progresso) + "%";
-  barra.innerText = Math.round(progresso) + "%";
-  textoNivel.innerText = `Nível ${nivel} — ${Math.round(progresso)}%`;
-  textoFolhas.innerText = `🌱 ${total} folhas`;
-  textoProx.innerText = (nivel < metas.length - 1) 
-      ? `Próximo nível em ${metas[nivel + 1] - total} folhas`
-      : "Você chegou ao nível máximo! 🌳✨";
+   
+    tarefas.forEach(t => {
+      t.checked = false;
+      t.dataset.contabilizada = "false";
+      localStorage.setItem(`tarefa_checked_${t.id}`, "false");
+      localStorage.setItem(`tarefa_cont_${t.id}`, "false");
+    });
 
-  // Atualiza imagem da árvore
-  imgArvore.src = imagensArvore[nivel];
+    // atualizar UI e salvar
+    atualizarUI();
+  }
 }
 
-// ========================================
-// 6. Eventos
-// ========================================
 
-// Quando muda alguma tarefa, chama marcarTarefas
-tarefas.forEach(t => t.addEventListener("change", marcarTarefas));
+function onChangeTarefa(e) {
+  const t = e.currentTarget;
+  const valor = Number(t.value) || 0;
 
-// Quando clica em reiniciar ou resetar, zera tudo
+  // controle para contar apenas uma vez
+  if (t.checked && t.dataset.contabilizada !== "true") {
+    
+    folhas += valor;
+    t.dataset.contabilizada = "true";
+  } else if (!t.checked && t.dataset.contabilizada === "true") {
+    
+    folhas -= valor;
+    if (folhas < 0) folhas = 0;
+    t.dataset.contabilizada = "false";
+  } else {
+    // caso marcado/desmarcado sem mudar contabilizada, nada a fazer
+  }
+
+  // salvar estado desta tarefa
+  localStorage.setItem(`tarefa_checked_${t.id}`, String(t.checked));
+  localStorage.setItem(`tarefa_cont_${t.id}`, String(t.dataset.contabilizada));
+
+  // verifica subida de nível (se subir, as checkboxes serão apagadas lá)
+  verificarSubidaNivel();
+
+  // atualiza interface (que também salva estado)
+  atualizarUI();
+}
+
+// ===== Eventos nas tarefas =====
+tarefas.forEach(t => {
+  
+  if (typeof t.dataset.contabilizada === "undefined") t.dataset.contabilizada = "false";
+  t.addEventListener("change", onChangeTarefa);
+});
+
+// ===== Botão REINICIAR: zera apenas missões (checkboxes + flags contabilizada) =====
 btnReiniciar.addEventListener("click", () => {
-  folhas = 0;
-  nivel = 0;
-  tarefas.forEach(t => t.checked = false);
+  tarefas.forEach(t => {
+    t.checked = false;
+    t.dataset.contabilizada = "false";
+    localStorage.setItem(`tarefa_checked_${t.id}`, "false");
+    localStorage.setItem(`tarefa_cont_${t.id}`, "false");
+  });
+
+  // NÃO mexe em folhas / nível / conquistas
   atualizarUI();
 });
 
+// ===== Texto "Apagar tudo": zera tudo exceto conquistas =====
 resetarTexto.addEventListener("click", () => {
+ 
   folhas = 0;
   nivel = 0;
-  tarefas.forEach(t => t.checked = false);
+
+  // limpa checkboxes
+  tarefas.forEach(t => {
+    t.checked = false;
+    t.dataset.contabilizada = "false";
+    localStorage.setItem(`tarefa_checked_${t.id}`, "false");
+    localStorage.setItem(`tarefa_cont_${t.id}`, "false");
+  });
+
+  // NÃO apaga conquistas (conquistas permanecem no localStorage)
   atualizarUI();
 });
 
-// ========================================
-// 7. Inicializa a interface na tela
-// ========================================
+// ===== Inicialização: restaurar estado salvo e atualizar a UI =====
+restaurarMissoes();
+restaurarConquistas();
 atualizarUI();
+
+// ===== Botão "Ver Conquistas" - Scroll suave =====
+const btnConquistas = document.getElementById("btnConquistas");
+
+btnConquistas.addEventListener("click", () => {
+    const alvo = document.getElementById("conquistas");
+    if (alvo) {
+        alvo.scrollIntoView({ behavior: "smooth" });
+    }
+});

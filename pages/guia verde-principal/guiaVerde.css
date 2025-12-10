@@ -172,482 +172,478 @@ a:hover,
 
 /* ===== CONTAINER INICIAL ===== */
 .container {
-  text-align: center;
-  padding: 40px 20px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 /* Título Principal */
 .text1 h1 {
-  color: #445b39;
-  margin-bottom: 5px;
-  font-size: 28px;
+    color: #445b39;
+    margin-bottom: 5px;
+    font-size: 28px;
 }
 
 .text1 p {
-  color: #777;
-  margin-top: 25px;
+    color: #777;
+    margin-top: 25px;
 }
 
 /* Nível */
 .nivel {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 25px 0;
-  font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+    font-weight: bold;
 }
 
 .card-info {
-  background: #e4e7ec;
-  padding: 10px 25px;
-  border-radius: 30px;
-  border: 1px solid #777777;
-  font-size: 14px;
+    background: #e4e7ec;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid #777777;
+    font-size: 14px;
 }
 
 /* ===== CARTÃO DA ÁRVORE ===== */
 .card {
-  background: #ffffff;
-  padding: 40px;
-  width: 100%;
-  max-width: 550px;
-  margin: auto;
-  border-radius: 15px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e0e0e0;
-  box-sizing: border-box;
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
 }
 
 .arvoreP img {
-  width: 300px;
-  margin: 0 auto 25px;
-  display: block;
+    width: 300px;
+    margin: 0 auto 25px;
+    display: block;
 }
 
 /* Barra de Progresso */
 .progress-label {
-  text-align: left;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 15px;
-  font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .progress-bar {
-  width: 100%;
-  height: 35px;
-  background: #e0e0e0;
-  border-radius: 50px;
-  overflow: hidden;
-  margin-bottom: 25px;
+    width: 100%;
+    height: 35px;
+    background: #e0e0e0;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 25px;
 }
 
 .barra {
-  width: 0%;
-  height: 100%;
-  background: linear-gradient(90deg, #2c473e, #6a8e4e);
-  color: #000;
-  text-align: center;
-  line-height: 35px;
-  transition: 0.3s;
-  font-weight: bold;
-  border-radius: 50px;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #2c473e, #6a8e4e);
+    color: #000;
+    text-align: center;
+    line-height: 35px;
+    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 50px;
 }
 
 .prox-nivel {
-  font-size: 14px;
-  color: #666;
-  margin: 20px;
-  font-weight: bold;
+    font-size: 14px;
+    color: #666;
+    margin: 20px;
+    font-weight: bold;
 }
 
 /* Botões */
 .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .btn {
-  border: none;
-  padding: 10px 25px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 14px;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .btn.verde {
-  background: linear-gradient(to right, #2c473e, #6a8e4e);
-  color: white;
-  font-weight: bold;
-  transition: all 0.4s ease;
-  background-size: 200% 200%;
+    background: linear-gradient(to right, #2c473e, #6a8e4e);
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    background-size: 200% 200%;
 }
 
 .btn.verde:hover {
-  background-position: right center;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .btn.cinza {
-  background: #e5e5e5;
-  color: #333;
-  font-weight: bold;
-  transition: all 0.4s ease;
+    background: #e5e5e5;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.4s ease;
 }
 
 .btn.cinza:hover {
-  background-position: right center;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* ===== MISSÕES ===== */
 .missao {
-  background: #ffffff;
-  width: 100%;
-  max-width: 550px;
-  margin: 30px auto;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #cccccc;
-  text-align: left;
-  box-sizing: border-box;
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    margin: 30px auto;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #cccccc;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .missao h3 {
-  text-align: center;
-  color: #2c473e;
-  margin-bottom: 15px;
-  font-size: 20px;
+    text-align: center;
+    color: #2c473e;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .missao label {
-  background: #e9f4e6;
-  padding: 12px;
-  border-radius: 10px;
-  font-size: 15px;
-  display: block;
-  margin-bottom: 8px;
-  cursor: pointer;
+    background: #e9f4e6;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .missao input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
 
 .resetar {
-  text-align: center;
-  color: #2b80d9;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 10px;
+    text-align: center;
+    color: #2b80d9;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .resetar:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* ===== PAINEL INFERIOR ===== */
 .painel-inferior {
-  width: 90%;
-  max-width: 1100px;
-  margin: 40px auto;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .box {
-  background: #ffffff;
-  width: 260px;
-  padding: 25px 20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #dcdcdc;
-  text-align: center;
+    background: #ffffff;
+    width: 260px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #dcdcdc;
+    text-align: center;
 }
 
 .box h3 {
-  font-size: 20px;
-  color: #2c473e;
-  margin-bottom: 15px;
+    font-size: 20px;
+    color: #2c473e;
+    margin-bottom: 15px;
 }
 
 /* Sequência */
 .sequencia-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;  
 }
 
 .sequencia-status {
-  display: inline-flex;
-  align-items: center;
-  background: #e9f4e6;
-  padding: 8px 15px;
-  border-radius: 12px;
-  font-weight: bold;
-  gap: 8px;
-  margin: auto;
+    display: inline-flex;
+    align-items: center;
+    background: #e9f4e6;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    gap: 8px;
+    margin: auto;
 }
 
 .box .info {
-  color: #666;
-  font-size: 14px;
+    color: #666;
+    font-size: 15px;
+    margin-top: 10px;
 }
 
 /* ===== CONQUISTAS ===== */
 .conquistas-lista {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 10px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    margin-top: -20px;
+    justify-items: center;
+    position: relative;
+
 }
 
 .conquista-item {
-  width: 70px;
-  height: 110px;
-  background: #eef3ee;
-  border-radius: 18px;
-  padding-top: 8px;
-  text-align: center;
+    height: 60px;
+    background: #e4f3e4;
+    border-radius: 18px;
+    padding-top: 8px;
+    text-align: center;
+    opacity: 0.4;
+    filter: grayscale(1);
+    transition: 0.3s ease;
 }
 
 .conquista-item img {
-  width: 45px;
-  height: 45px;
-  margin-bottom: 6px;
+    width: 45px;
+    height: 50px;
+    margin-bottom: 10px;
+
 }
 
 .conquista-item p {
-  font-size: 12px;
-  color: #6a8e4e;
-  line-height: 1.1;
+    font-size: 12px;
+    color: #6a8e4e;
+    line-height: 1.1;
+}
+
+/* Desbloqueada */
+.conquista-item.desbloqueada {
+    opacity: 1 !important;
+    filter: grayscale(0) !important;
+    transform: scale(1.05);
 }
 
 /* ===== QUIZ ===== */
 .quiz-section {
-  width: 100%;
-  max-width: 550px;
-  margin: 40px auto;
-  text-align: center;
-  align-items: center;
-  box-sizing: border-box;
+    width: 100%;
+    max-width: 550px;       
+    margin: 40px auto;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .quiz-section h2 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 12px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .quiz-section .subtitle {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 30px;
+    font-size: 18px;
+    color: #667085;
+    margin-bottom: 30px;
 }
 
-/* ===== CARDS QUIZ (CORRIGIDO E MAIOR) ===== */
+/* ===== CARDS QUIZ ===== */
 .quiz-card {
-  width: 100%;
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 25px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 150px;
-  /* ALTURA AUMENTADA */
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
-  margin-bottom: 30px;
-  border: 2px solid #e6e6e6;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-sizing: border-box;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 150px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    border: 2px solid #e6e6e6;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
 }
 
 .quiz-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .quiz-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
 }
 
 /* Icon + Badge */
 .icon-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .folhas-badge {
-  position: absolute;
-  top: -14px;
-  /* Ajustado */
-  background: #d8f7d4ab;
-  padding: 5px 16px;
-  /* Ajustado */
-  border-radius: 20px;
-  font-size: 10px;
-  /* Ajustado */
-  font-weight: 600;
-  color: #2c473e;
-  border: 1px solid #bdebb7;
-  white-space: nowrap;
+    position: absolute;
+    top: -14px;
+    background: #d8f7d4ab;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #2c473e;
+    border: 1px solid #bdebb7;
+    white-space: nowrap;
 }
 
 .quiz-icon {
-  max-width: 110px;
-  /* AUMENTADO */
-  width: 100%;
-  height: 75px;
-  /* AUMENTADO */
-  object-fit: contain;
+    max-width: 110px;
+    width: 100%;
+    height: 75px;
+    object-fit: contain;
 }
 
 /* Textos */
 .quiz-texts {
-  text-align: left;
-  max-width: 100%;
+    text-align: left;
+    max-width: 100%;
 }
 
 .quiz-texts h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #222;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
 }
 
 .quiz-texts p {
-  font-size: 14px;
-  min-height: 36px;
-  display: flex;
-  align-items: center;
+    font-size: 16px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #2c473e;
 }
 
 /* Cores por Quiz */
-.quiz1 .quiz-texts p {
-  color: #2b7a78;
-}
+.quiz1 .quiz-texts h3 { color: #2c473e; }
+.quiz2 .quiz-texts h3 { color: #0a6794; }
+.quiz3 .quiz-texts h3{ color: #6a8e4e; }
 
-.quiz2 .quiz-texts p {
-  color: #ff6b6b;
-}
-
-.quiz3 .quiz-texts p {
-  color: #ffd93d;
-}
-
-/* Botão Quiz */
+/* Botão Quiz Lucas aqui estão os botões que precisa ser alterado*/
 .btn-quiz {
-  padding: 10px 18px;
-  border: none;
-  border-radius: 0px 20px 0px 20px;
-  background: linear-gradient(to right, #2c473e, #6a8e4e);
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 0px 20px 0px 20px;
+    background: linear-gradient(to right, #2c473e, #6a8e4e);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-quiz:hover {
-  background: #225421;
+    background: #225421;
 }
 
 /* ===== VÍDEOS ===== */
 .videos-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 .videos-section h2 {
-  font-size: 26px;
-  font-weight: 600;
-  color: #2c473e;
+    font-size: 26px;
+    font-weight: 600;
+    color: #2c473e;
 }
 
 .videos-section .subtitle {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 25px;
+    font-size: 20px;
+    color: #667085;
+    margin-bottom: 25px;
 }
 
 .videos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 25px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 25px;
+    justify-items: center;
 }
 
 .video-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eaeaea;
-  overflow: hidden;
-  transition: 0.3s;
-  width: 100%;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 100%;
 }
 
 .video-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .video-card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
 }
 
 .video-info {
-  padding: 15px 18px;
+    padding: 15px 18px;
 }
 
 .video-info h3 {
-  font-size: 16px;
-  color: #222;
-  margin-bottom: 6px;
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 6px;
 }
 
 .video-info p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 14px;
-  font-size: 12px;
-  background: #e4f3e4;
-  color: #2c473e;
-  font-weight: 600;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    background: #e4f3e4;
+    color: #2c473e;
+    font-weight: 600;
 }
 
-/* =============================
-    ARTIGOS & LEITURAS (CORRIGIDO)
-============================= */
-
+/* ARTIGOS */
 .artigos-section {
   width: 90%;
   max-width: 1200px;
@@ -672,15 +668,14 @@ a:hover,
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 25px;
   justify-items: center;
-  grid-template-columns: fr;
 }
 
-/* CARD ARTIGO (igual ao card de vídeo) */
+/* CARD ARTIGO */
 .artigo-card2 {
   background: #fff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   border: 1px solid #eaeaea;
   width: 100%;
   transition: 0.3s;
@@ -688,13 +683,12 @@ a:hover,
 
 .artigo-card2:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .artigo-card2 img {
   width: 100%;
   height: 190px;
-  /* Mesmo tamanho do vídeo */
   object-fit: cover;
 }
 
@@ -709,7 +703,6 @@ a:hover,
   color: #222;
   margin-bottom: 6px;
   min-height: 44px;
-  /* Mantém altura como no Quiz */
   display: flex;
   align-items: center;
 }
@@ -742,25 +735,311 @@ a:hover,
 
 /* Botão Artigo */
 .btn-artigo2 {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 15px;
-  background: linear-gradient(90deg, #1827f5a9, #1100ff);
-  background-size: 200% 200%;
-  color: white;
-  font-weight: 600;
-  font-size: 12px;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #2c473e, #385e51);
+    background-size: 200% 200%;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    margin-top: 8px;
 }
 
 .btn-artigo2:hover {
-  background-position: right center;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.finish{}
+
+
+/* ==============================
+   SCROLL HORIZONTAL NO MOBILE
+============================== */
+@media (max-width: 768px) {
+
+    .videos-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+
+    .video-card {
+        min-width: 260px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+
+    .artigos-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+
+    .artigo-card2 {
+        min-width: 280px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+}
+
+/* ==============================
+   RESPONSIVIDADE GERAL 
+============================== */
+@media (max-width: 768px) {
+
+    /* Container */
+    .container {
+        padding: 25px 15px;
+    }
+
+    .text1 h1 {
+        font-size: 22px;
+    }
+
+    .text1 p {
+        font-size: 14px;
+    }
+
+    /* Nível */
+    .nivel {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-info {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    /* Card da Árvore */
+    .card {
+        padding: 25px;
+        max-width: 95%;
+    }
+
+    .arvoreP img {
+        width: 220px;
+    }
+
+    .progress-bar {
+        height: 28px;
+    }
+
+    .barra {
+        line-height: 28px;
+        font-size: 13px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* Missões */
+    .missao {
+        max-width: 98%;
+        padding: 15px;
+    }
+
+    .missao h3 {
+        font-size: 18px;
+    }
+
+    .missao label {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Painel inferior */
+    .painel-inferior {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    /* Sequência */
+    .sequencia-box {
+        height: auto;
+        gap: 10px;
+    }
+
+    /* Conquistas */
+    .conquistas-lista {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .conquista-item {
+        width: 90px;
+        height: 130px;
+    }
+
+    .conquista-item img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .conquista-item p {
+        font-size: 13px;
+    }
+
+    /* Quiz Section */
+    .quiz-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .quiz-left {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quiz-icon {
+        max-width: 90px;
+        height: 80px;
+    }
+
+    .folhas-badge {
+        font-size: 9px;
+        padding: 4px 12px;
+        top: 50px;
+    }
+
+    .quiz-texts h3 {
+        font-size: 18px;
+        min-height: auto;
+    }
+
+    .quiz-texts p {
+        font-size: 18px;
+        min-height: auto;
+    }
+
+    .btn-quiz {
+        width: 60%;
+}
+}
+
+/* ==============================
+   RESPONSIVIDADE VÍDEOS E ARTIGOS
+============================== */
+@media (max-width: 768px) {
+
+    /* Vídeos - scroll horizontal */
+    .videos-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding-bottom: 10px;
+    }
+
+    .videos-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .video-card {
+        min-width: 260px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    /* Artigos - scroll horizontal */
+    .artigos-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding-bottom: 10px;
+    }
+
+    .artigos-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .artigo-card2 {
+        min-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+}
+
+/* ==============================
+  TELAS DE 480px)
+============================== */
+@media (max-width: 480px) {
+
+    .text1 h1 {
+        font-size: 20px;
+    }
+
+    .arvoreP img {
+        width: 180px;
+    }
+
+    .quiz-icon {
+        max-width: 75px;
+        height: 55px;
+    }
+
+    .conquista-item {
+        width: 80px;
+        height: 120px;
+    }
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip escondido */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #949494;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+
+  position: absolute;
+  bottom: 135%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar no hover */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
 
 
