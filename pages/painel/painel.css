@@ -143,8 +143,7 @@ main {
     margin-top: 64px;
 }
 
-.containerDadosAmbientais,
-.containerResultadoPlantae {
+.containerDadosAmbientais {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -154,8 +153,7 @@ main {
     margin: 0 auto;
 }
 
-.containerCardsDadosAmbientais,
-.containerCardsResultadoPlantae {
+.containerCardsDadosAmbientais {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -171,11 +169,7 @@ main {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
 }
 
-.containerImgCardDadosAmbientaisUm,
-.containerImgCardResultadoPlantaeUm,
-.containerImgCardResultadoPlantaeDois,
-.containerImgCardResultadoPlantaeTres,
-.containerImgCardResultadoPlantaeQuatro {
+.containerImgCardDadosAmbientaisUm {
     width: max-content;
     padding: 12px;
     background: rgba(106, 142, 78, 0.08);
@@ -189,8 +183,7 @@ main {
     font-weight: 600;
 }
 
-.tituloCardDadosAmbientais,
-.tituloCardResultadoPlantae {
+.tituloCardDadosAmbientais {
     margin-top: 16px;
     color: rgba(44, 71, 62, 0.70);
     font-family: "Poppins", sans-serif;
@@ -198,8 +191,7 @@ main {
     font-weight: 600;
 }
 
-.dadoCardDadosAmbientais,
-.dadoCardResultadoPlantae {
+.dadoCardDadosAmbientais {
     margin-top: 12px;
     color: #2C473E;
     font-family: "Poppins", sans-serif;
@@ -207,8 +199,7 @@ main {
     font-weight: 600;
 }
 
-.subtituloCardDadosAmbientais,
-.subtituloCardResultadoPlantae {
+.subtituloCardDadosAmbientais {
     margin-top: 2px;
     color: rgba(44, 71, 62, 0.60);
     font-family: "Roboto", sans-serif;
@@ -277,54 +268,6 @@ main {
 
 #chartLixoes {
     height: 100%;
-}
-
-.tituloResultadoPlantae {
-    color: #2C473E;
-    font-family: "Poppins", sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-}
-
-.textoResultadoPlantae {
-    color: rgba(44, 71, 62, 0.70);
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-}
-
-
-.containerCardResultadoPlantae {
-    max-width: 100%;
-    width: 282px;
-    height: max-content;
-    padding: 24px;
-    border: 1px solid rgba(44, 71, 62, 0.05);
-    border-radius: 16px;
-    background: linear-gradient(135deg, #FFF 0%, rgba(106, 142, 78, 0.04) 100%);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
-}
-
-.textoCardResultadoPlantae {
-    color: rgba(44, 71, 62, 0.70);
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.dadoCardResultadoPlantae {
-    margin-top: 8px;
-}
-
-.containerImgCardResultadoPlantaeDois {
-    background: rgba(44, 71, 62, 0.08);
-}
-
-.containerImgCardResultadoPlantaeTres {
-    background: rgba(10, 103, 148, 0.08);
-}
-
-.containerImgCardResultadoPlantaeQuatro {
-    background: rgba(176, 209, 130, 0.08);
 }
 
 .transformeDados {
@@ -523,8 +466,7 @@ footer {
         margin-top: 24px;
     }
 
-    .tituloDadosAmbientais,
-    .tituloResultadoPlantae {
+    .tituloDadosAmbientais {
         padding: 0 20px;
         font-size: 24px;
     }
@@ -533,11 +475,7 @@ footer {
         flex-direction: column;
     }
 
-    .textoResultadoPlantae {
-        padding: 0 20px;
-    }
-
-    .containerCardDadosAmbientais, .containerCardResultadoPlantae, .containerGraficos {
+    .containerCardDadosAmbientais, .containerGraficos {
         max-width: 100%;
         margin: auto 20px;
     }

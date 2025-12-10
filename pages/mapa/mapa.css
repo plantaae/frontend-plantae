@@ -450,6 +450,10 @@ a:hover,
   justify-content: flex-start;
 }
 
+.comoUsar {
+  text-decoration: none;
+}
+
 .sidebar {
   width: 365px;
   height: 502px;
